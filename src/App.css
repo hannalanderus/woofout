@@ -90,8 +90,9 @@ input{
     width: 50px;
     position: absolute;
     margin: 30px;
-
-
+}
+.menuWrapper a{
+    text-decoratioin: none;
 }
 /**********/
 

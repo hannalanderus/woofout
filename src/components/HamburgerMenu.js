@@ -5,7 +5,7 @@ const HamburgerMenu = () => {
 
     return (
       <div id="hamburger" className="overlay">          
-            <div className="overlayContent">
+            <div className="menuWrapper">
                 <ul>
                     <a href="/Registration"><p>REGISTRERING</p></a>
                     <a href="/Profile"><p>PROFIL</p></a>
