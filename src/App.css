@@ -72,10 +72,10 @@ input{
   justify-content: center;
 }
 
-.App-header a{
+/*.App-header a{
   text-decoration: none;
   color:White;
-}
+}*/
 .App-link {
   color: #61dafb;
 }
@@ -90,9 +90,11 @@ input{
     width: 50px;
     position: absolute;
     margin: 30px;
+    
 }
-.menuWrapper a{
-    text-decoratioin: none;
+a {
+  text-decoration: none;
+  color: white;
 }
 /**********/
 
