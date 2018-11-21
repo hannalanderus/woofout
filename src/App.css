@@ -1,0 +1,95 @@
+#headerWrapper{
+  background-color: #AC0161 ;
+  color:white;
+  height:300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #E25E31;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display:flex;
+  justify-content: center;
+   padding-top: 50px;
+}
+/*** log in ***/
+.inputWrapper{
+  width: 300px;
+  display:flex;
+  flex-direction: column;
+}
+
+input{
+  height: 50px;
+  margin-top:50px;
+  background-image: none !important;
+}
+.button{
+  margin:50px 30px 0px 30px;
+  height: 50px;
+  background-color:#AC0161;
+  color:White;
+  border:none;
+  cursor: pointer;
+}
+/*************/
+
+.App-header-registration{
+  background-color: #F3C928;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; 
+}
+.App-header-workout{
+  background-color: #DCE5EA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#headerWrapper-workout{
+  background-color: #DCE5EA ;
+  color:white;
+  height:300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header a{
+  text-decoration: none;
+  color:White;
+}
+.App-link {
+  color: #61dafb;
+}
+/***** Hamburger Menu ******/
+
+
+#hamburger {
+    background: url(./components/Images/hamburger.svg) no-repeat;
+    background-size: 50px 50px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 30px;
+
+
+}
+/**********/
+
