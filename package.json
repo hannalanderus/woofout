@@ -2,8 +2,9 @@
   "name": "woofout",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://hannalanderus.github.io/woofout/",
+  "homepage": "https://hannalanderus.github.io/woofout/",
   "dependencies": {
+    "firebase": "^5.5.9",
     "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -29,7 +30,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0"
   }
 }
