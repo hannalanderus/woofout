@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import fire from './config/Fire';
 import '../App.css';
 
-class Registration  extends Component {
+class RegistrationDog  extends Component {
 
     constructor(props){
     super(props);
@@ -28,17 +28,18 @@ signup(e){
     render(){
     return (
       <div className="App">
-      	<div id="headerWrapper">
-      		<a href="/"><div class="logo"><h1>WOFFOUT</h1></div></a>
-      		<h2>REGISTRERING</h2>
-      	</div>
-        <header className="App-header-registration">
+        <div id="headerWrapper">
+          <a href="/"><div class="logo"><h1>WOFFOUT</h1></div></a>
+          <h2>REGISTRERA DIN HUND</h2>
+        </div>
+        <header className="App-header-registrationdog">
         <div className="inputWrapper">
-          <input placeholder="Förnamn"></input>
-          <input placeholder="Efternamn"></input>
-          <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
-          <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
-           <input placeholder="Konfirmera lösenord"></input>
+          <input placeholder="Namn"></input>
+          <input placeholder="Ras"></input>
+          <input placeholder="Storlek"></input>
+          <input placeholder="Vikt"></input>
+          <input placeholder="Ålder"></input>
+          <input placeholder="Ladd upp bild"></input>
           <button onClick={this.signup} className="button" id="signUp">Registrera</button>
         </div>
         </header>
@@ -48,5 +49,4 @@ signup(e){
 }
 
 
-export default Registration;
-
+export default RegistrationDog;

@@ -47,11 +47,20 @@ input{
 .App-header-registration{
   background-color: #F3C928;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white; 
+  color: white;
+  display:flex;
+  justify-content: center;
+   padding-top: 50px; 
+}
+.App-header-registrationdog{
+  background-color: white;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display:flex;
+  justify-content: center;
+  padding-top: 50px; 
 }
 .App-header-workout{
   background-color: #DCE5EA;
@@ -92,9 +101,17 @@ input{
     margin: 30px;
     
 }
+.menuWrapper{
+  margin-top:50px;
+  width: 220px;
+}
+.menuWrapper p{
+  margin-left: -40px;
+}
 a {
   text-decoration: none;
   color: white;
 }
+
 /**********/
 
