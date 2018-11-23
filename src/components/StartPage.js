@@ -1,23 +1,23 @@
 import React from 'react';
-import '../App.css';
+import '../resources/scss/style.scss';
 
 const StartPage = () => {
 
-    return (
-      <div className="App">
+  return (
+    <div className="App">
       <div id="headerWrapper">
         <h1>WOFFOUT</h1>
       </div>
-        <header className="App-header">
-          <div className="inputWrapper">
+      <header className="App-header">
+        <div className="inputWrapper">
           <input type="text" id="username" placeholder="Användarnamn"></input>
-          <input  type="password" id="password" placeholder="Lösenord"></input>
+          <input type="password" id="password" placeholder="Lösenord"></input>
           <button className="button" id="login">Log in</button>
-          </div>
-        </header>
-      </div>
+        </div>
+      </header>
+    </div>
 
-    );
+  );
 
 }
 
