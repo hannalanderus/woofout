@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../resources/scss/style.scss';
 import StartPage from './StartPage';
 import Registration from './Registration';
 import RegistrationDog from './RegistrationDog';
@@ -54,8 +54,8 @@ class App extends Component {
               <Route path="/RegistrationDog" component={RegistrationDog} />
             </Switch>
           </div>
-        </BrowserRouter>
-      </div>
+        </BrowserRouter >
+      </div >
     );
   }
 }
