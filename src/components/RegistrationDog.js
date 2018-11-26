@@ -29,7 +29,7 @@ class RegistrationDog extends Component {
     return (
       <div className="App">
         <div id="headerWrapper">
-          <a href="/"><div class="logo"><h1>WOFFOUT</h1></div></a>
+          <a href="/"><div className="logo"><h1>WOFFOUT</h1></div></a>
           <h2>REGISTRERA DIN HUND</h2>
         </div>
         <header className="App-header-registrationdog">
