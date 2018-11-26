@@ -1,9 +1,22 @@
+//shared
+@import 'shared/breakers';
+@import 'shared/colors';
+@import 'shared/normalize';
+
+//components
 @import 'components/hamburgermenu';
 @import 'components/profile';
 @import 'components/registration';
 @import 'components/startpage';
 @import 'components/workoutbank';
 @import 'components/button';
+
+// Gone is the desktop, table and mobile. Let's use s, m, l, xl.
+$s: 500px;
+$m: 800px;
+$l: 1050px;
+$xl: 1410px;
+
 
 #headerWrapper{
   background-color: #AC0161 ;
@@ -34,32 +47,3 @@
 .App-link {
   color: #61dafb;
 }
-
-/*** log in ***/
-.inputWrapper{
-  width: 300px;
-  display:flex;
-  flex-direction: column;
-}
-
-input{
-  height: 50px;
-  margin-top:50px;
-  background-image: none !important;
-  font-size: 0.6em;
-}
-
-/*************/
-
-.App-header-registrationdog{
-  background-color: white;
-  min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  display:flex;
-  justify-content: center;
-  padding-top: 50px; 
-}
-
-
-
