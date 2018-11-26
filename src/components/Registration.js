@@ -10,10 +10,12 @@ class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
     this.state = {
+      forename:'',
+      surname:'',
       email: '',
       password: '',
     }
-  }
+             }
 
 
   signup(e) {
@@ -22,6 +24,7 @@ class Registration extends Component {
       .catch((error) => {
 
       })
+
   }
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -35,9 +38,9 @@ class Registration extends Component {
         </div>
         <header className="App-header-registration">
           <div className="inputWrapper">
-            <input placeholder="Förnamn"></input>
-            <input placeholder="Efternamn"></input>
-            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
+            <input value={this.state.forename} onChange={this.handleChange} type="forename" name="forename" id="forename" placeholder="Förnamn"></input>
+            <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn"></input>
+            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Email"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
             <input placeholder="Konfirmera lösenord"></input>
             <button onClick={this.signup} className="button" id="signUp">Registrera</button>

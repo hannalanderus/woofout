@@ -1,6 +1,7 @@
 import React from 'react';
 import '../resources/scss/style.scss';
 
+
 const HamburgerMenu = () => {
 
     return (

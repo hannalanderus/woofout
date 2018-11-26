@@ -11,7 +11,7 @@ class StartPage extends Component {
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
-     this.logout = this.logout.bind(this);
+    this.logout = this.logout.bind(this);
     this.state = {
       email: '',
       password: '',
@@ -55,6 +55,7 @@ class StartPage extends Component {
       .catch((error) => {
 
       })
+     console.log('clicked');
   }
    logout() {
     fire.auth().signOut();
