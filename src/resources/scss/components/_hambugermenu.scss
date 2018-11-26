@@ -1,0 +1,21 @@
+#hamburger {
+    background: url(../../resources/Images/hamburger.svg) no-repeat;
+    background-size: 50px 50px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 30px;
+    
+}
+.menuWrapper{
+  margin-top:50px;
+  width: 220px;
+}
+.menuWrapper p{
+  margin-left: -40px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
