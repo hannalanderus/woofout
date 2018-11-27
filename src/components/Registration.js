@@ -10,12 +10,12 @@ class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
     this.state = {
-      forename:'',
-      surname:'',
+      forename: '',
+      surname: '',
       email: '',
       password: '',
     }
-             }
+  }
 
 
   signup(e) {

@@ -4,6 +4,7 @@ import fire from './config/Fire';
 import Profile from './Profile';
 import '../resources/scss/style.scss';
 
+
 class StartPage extends Component {
 
   constructor(props) {
@@ -15,7 +16,7 @@ class StartPage extends Component {
     this.state = {
       email: '',
       password: '',
-      user: { user : false}
+      user: { user: false }
     }
   }
 
@@ -29,9 +30,9 @@ class StartPage extends Component {
     fire.auth().onAuthStateChanged((user) => {
       console.log(user);
       if (user) {
-        this.setState({ user : true});
+        this.setState({ user: true });
         console.log('inloggad');
-        
+
       } else {
         /*this.setState({ user : false});*/
         /*alert('fel fel fel, fel email eller lösen')*/
@@ -55,9 +56,8 @@ class StartPage extends Component {
       .catch((error) => {
 
       })
-     console.log('clicked');
   }
-   logout() {
+  logout() {
     fire.auth().signOut();
   }
   handleChange(e) {
@@ -65,12 +65,12 @@ class StartPage extends Component {
   }
 
   render() {
-   
+
     return (
 
       <div className="App">
-      {/*{this.state.user ? (<Profile />) : (<StartPage />)}*/}
-            <div id="headerWrapper">
+        {/*{this.state.user ? (<Profile />) : (<StartPage />)}*/}
+        <div id="headerWrapper">
           <h1>WOFFOUT</h1>
         </div>
         <header className="App-header">

@@ -1,12 +1,15 @@
+@import 'shared/colors';
+
 .inputWrapper{
   width: 300px;
   display:flex;
   flex-direction: column;
-}
 
-input{
-  height: 50px;
-  margin-top:50px;
-  background-image: none !important;
-  font-size: 0.6em;
+
+  input{
+    height: 50px;
+    margin-top:50px;
+    background-image: none !important;
+    font-size: 0.6em;
+  }
 }
