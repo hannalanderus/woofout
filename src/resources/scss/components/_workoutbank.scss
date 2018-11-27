@@ -1,17 +1,17 @@
 @import 'shared/colors';
 
 .App-header-workout{
-  background-color: #DCE5EA;
+  background-color: $lightblue;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $white
 }
 #headerWrapper-workout{
-  background-color: #DCE5EA ;
-  color:white;
+  background-color:$lightblue ;
+  color: $white;
   height:300px;
   display: flex;
   flex-direction: column;
