@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import fire from './config/Fire';
-import Profile from './Profile';
+// import Profile from './Profile';
 import '../resources/scss/style.scss';
 
 

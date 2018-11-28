@@ -36,8 +36,8 @@ class Registration extends Component {
           <a href="/"><div className="logo"><h1>WOFFOUT</h1></div></a>
           <h2>REGISTRERING</h2>
         </div>
-        <header className="App-header-registration">
-          <div className="inputWrapper">
+        <header className="App-header-registration blue-gradient">
+          <div className="inputWrapper ">
             <input value={this.state.forename} onChange={this.handleChange} type="forename" name="forename" id="forename" placeholder="Förnamn"></input>
             <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn"></input>
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Email"></input>
@@ -46,7 +46,7 @@ class Registration extends Component {
             <button onClick={this.signup} className="button" id="signUp">Registrera</button>
           </div>
         </header>
-      </div>
+      </div >
     );
   }
 }
