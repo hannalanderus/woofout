@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire from './config/Fire';
+import firebase from './config/Fire';
 import '../resources/scss/style.scss';
 
 
@@ -10,25 +10,35 @@ class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
     this.state = {
-      forename: '',
-      surname: '',
+      name:'',
+      surname:'',
       email: '',
       password: '',
     }
-  }
-
+             }
 
   signup(e) {
     e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+    var db = firebase.firestore();
+    db.collection("user").add({
+      name: this.state.name,
+      surname: this.state.surname,
+    })
+
+    //const name = this.state.name;
+    //const surname = this.state.surname;
+    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
       .catch((error) => {
 
       })
+      //console.log(name, surname);
 
   }
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
+
+
   render() {
     return (
       <div className="App">
@@ -38,7 +48,7 @@ class Registration extends Component {
         </div>
         <header className="App-header-registration">
           <div className="inputWrapper">
-            <input value={this.state.forename} onChange={this.handleChange} type="forename" name="forename" id="forename" placeholder="Förnamn"></input>
+            <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Förnamn"></input>
             <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn"></input>
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Email"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
