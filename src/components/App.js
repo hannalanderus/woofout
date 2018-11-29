@@ -17,15 +17,13 @@ class App extends Component {
       <div>
         <HamburgerMenu />
         <BrowserRouter>
-          <div>
-            <Switch>
-              <Route path="/" component={StartPage} exact />
-              <Route path="/Registration" component={Registration} />
-              <Route path="/Profile" component={Profile} />
-              <Route path="/WorkoutBank" component={WorkoutBank} />
-              <Route path="/RegistrationDog" component={RegistrationDog} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route path="/" component={StartPage} exact />
+            <Route path="/Registration" component={Registration} />
+            <Route path="/Profile" component={Profile} />
+            <Route path="/WorkoutBank" component={WorkoutBank} />
+            <Route path="/RegistrationDog" component={RegistrationDog} />
+          </Switch>
         </BrowserRouter >
       </div >
     );

@@ -7,6 +7,7 @@
 @import 'components/hamburgermenu';
 @import 'components/profile';
 @import 'components/registration';
+@import 'components/registrationDog';
 @import 'components/startpage';
 @import 'components/workoutbank';
 @import 'components/button';
@@ -27,9 +28,9 @@ $xl: 1410px;
   align-items: center;
   justify-content: center;
 }
-.App {
-  text-align: center;
-}
+// .App {
+//   text-align: center;
+// }
 .App-header {
   background-color: #E25E31;
   min-height: 100vh;
@@ -40,10 +41,10 @@ $xl: 1410px;
   padding-top: 50px;
 }
 
-/*.App-header a{
-  text-decoration: none;
-  color:White;
-}*/
-.App-link {
-  color: #61dafb;
-}
+// /*.App-header a{
+//   text-decoration: none;
+//   color:White;
+// }*/
+// .App-link {
+//   color: #61dafb;
+// }

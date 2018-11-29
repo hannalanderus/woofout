@@ -6,57 +6,75 @@ import '../resources/scss/style.scss';
 
 
 class Workoutbank extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      name: [],
-      type: [],
-      purpose: [],
-      description: []
+      data: []
     };
   }
-
   componentDidMount() {
-    var db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true
-    });
+    const database = firebase.firestore().collection('trainingprogram');
+    database.onSnapshot(this.getCollection);
 
-    const database = db.collection("trainingprogram");
+  }
 
-    database.get().then((querySnapshot) => {
-      querySnapshot.forEach((databaseCollection) => {
-        // console.log(databaseCollection.id, " => ", databaseCollection.data());
-        const data = databaseCollection.data();
-        this.setState({ name: data.name });
-        this.setState({ type: data.type });
-        this.setState({ purpose: data.purpose });
-        this.setState({ description: data.description });
-        console.log(this.state);
-
+  getCollection = (querySnapshot) => {
+    const data = [];
+    querySnapshot.forEach((doc) => {
+      const { name, type, purpose, description, material } = doc.data();
+      data.push({
+        key: doc.id,
+        doc, // DocumentSnapshot
+        name,
+        type,
+        material,
+        purpose,
+        description
       });
-
+    });
+    this.setState({
+      data
     });
   }
 
-  render() {
-    console.log(this.state.type);
-    return (
-      <div className="App">
-        <div id="headerWrapper-workout">
-          <a href="/"><div className="logo"><h1>WOFFOUT</h1></div></a>
-          <h2>ÖVNINGSBANK</h2>
-          <ul>
-            <li>Typ:{this.state.type}</li>
-            <li>Syfte:{this.state.purpose}</li>
-            <li>Namn:{this.state.name}</li>
-            <li>Utförande:{this.state.description}</li>
-          </ul>
-        </div>
-        <header className="App-header-workout">
-        </header>
+  // componentDidMount() {
+  // 
+  //   });
 
-      </div>
+  //   const database = db.collection("trainingprogram");
+
+  //   database.get().then((querySnapshot) => {
+  //     querySnapshot.forEach((databaseCollection) => {
+  //       // console.log(databaseCollection.id, " => ", databaseCollection.data());
+  //       const data = databaseCollection.data();
+  //       this.setState({ data: data });
+  //       // this.setState({ name: data.name });
+  //       // console.log(this.state);
+  //       databaseCollection.docs.map(doc => doc.data())
+
+  //     });
+
+  //   });
+  // }
+
+  render() {
+
+    return (
+      <section className="workoutPage">
+        <div className="workoutPage-wrapper">
+          <h2>ÖVNINGSBANK</h2>
+          {this.state.data.map(each =>
+            <ul className="workoutPage-list" key={each.id}>
+              <li>{each.name}</li>
+              <li>{each.type}</li>
+              <li>{each.purpose}</li>
+              <li>{each.material}</li>
+              <li>{each.description}</li>
+            </ul>
+          )}
+        </div>
+      </section>
     );
   }
 }

@@ -4,9 +4,14 @@ $gray: gray;
 $white: white;
 $pink: #AC0161;
 $borange: #E25E31;
-$yellow: rgb(253, 237, 4);
+$yellow: #F5C825;
 $lightblue:  #DCE5EA;
 
+//gradients
+
+.blue-gradient{
+    background: linear-gradient( #E6E8EC,#C1CAD5);
+}
 
 .bg-yellow{
     background-color:$yellow;
