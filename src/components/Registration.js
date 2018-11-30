@@ -19,28 +19,27 @@ class Registration extends Component {
 
   signup(e) {
     e.preventDefault();
-
+    
     var db = firebase.firestore();
-
+  
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
       var user = firebase.auth().currentUser;
-      db.collection("users").doc(user.uid).set({
-        name: this.state.name,
-        surname: this.state.surname,
-      })
-      user.sendEmailVerification().then(function () {
-        console.log("verification email sent");
-      }).then(function () {
-        alert("Document successfully written!");
-        window.location.href = "/RegistrationDog";
-      }).catch(function (error) {
-        alert("Got an error", error);
-      });
-
+        db.collection("users").doc(user.uid).set({
+      name: this.state.name,
+      surname: this.state.surname,
     })
+        user.sendEmailVerification().then(function() { 
+         console.log("verification email sent"); 
+         }).then(function() {
+           alert("Document successfully written!");
+           window.location.href="/RegistrationDog";
+           }).catch(function(error){ 
+            alert("Got an error",error); 
+             });
 
-  }
+  })
 
+}
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
