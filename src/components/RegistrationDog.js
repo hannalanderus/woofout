@@ -16,18 +16,24 @@ class RegistrationDog extends Component {
     }
   }
 
-
   signup(e) {
     e.preventDefault();
     var db = firebase.firestore();
-    db.collection("dog").add({
-      name: this.state.name,
-      breed: this.state.breed,
-      size: this.state.size,
-      weight: this.state.weight,
-    })
-    
-  }
+    var userdog = firebase.auth().currentUser;
+        db.collection("dog").add({
+        name: this.state.name,
+        breed: this.state.breed,
+        size: this.state.size,
+        weight: this.state.weight,
+        userID: userdog.uid,
+    }).then(function() {
+           alert("Document successfully written!");
+               window.location.href="/Profile";
+           }).catch(function(error){ 
+            alert("Got an error",error); 
+             });
+}
+
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -45,7 +51,8 @@ class RegistrationDog extends Component {
             <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
             <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
             <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
-            <button onClick={this.signup} className="button" id="signUp">Registrera</button>
+            <button onClick={this.signup} className="button" id="signUp">KLAR</button>
+    
           </div>
         </header>
       </div>
