@@ -10,30 +10,37 @@ class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
     this.state = {
-      name:'',
-      surname:'',
+      name: '',
+      surname: '',
       email: '',
       password: '',
     }
-             }
+  }
 
   signup(e) {
     e.preventDefault();
+
     var db = firebase.firestore();
-    db.collection("user").add({
-      name: this.state.name,
-      surname: this.state.surname,
+
+    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+      var user = firebase.auth().currentUser;
+      db.collection("users").doc(user.uid).set({
+        name: this.state.name,
+        surname: this.state.surname,
+      })
+      user.sendEmailVerification().then(function () {
+        console.log("verification email sent");
+      }).then(function () {
+        alert("Document successfully written!");
+        window.location.href = "/RegistrationDog";
+      }).catch(function (error) {
+        alert("Got an error", error);
+      });
+
     })
 
-    //const name = this.state.name;
-    //const surname = this.state.surname;
-    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .catch((error) => {
-
-      })
-      //console.log(name, surname);
-
   }
+
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -64,4 +71,3 @@ class Registration extends Component {
 
 
 export default Registration;
-

@@ -10,7 +10,11 @@ class Profile extends Component {
     this.logout = this.logout.bind(this);
   }
   logout() {
-    fire.auth().signOut();
+    fire.auth().signOut().then((u) => {
+      window.location.href = "/";
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   render() {
