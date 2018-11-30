@@ -10,12 +10,12 @@ class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
     this.state = {
-      name:'',
-      surname:'',
+      name: '',
+      surname: '',
       email: '',
       password: '',
     }
-             }
+  }
 
   signup(e) {
     e.preventDefault();
@@ -40,7 +40,6 @@ class Registration extends Component {
   })
 
 }
-
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -71,4 +70,3 @@ class Registration extends Component {
 
 
 export default Registration;
-

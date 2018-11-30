@@ -44,6 +44,7 @@ class StartPage extends Component {
   login(e) {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+      window.location.href = "/profile";
     }).catch((error) => {
       console.log(error);
     });
@@ -58,13 +59,18 @@ class StartPage extends Component {
       })
   }
   logout() {
-    fire.auth().signOut();
+    fire.auth().signOut().then((u) => {
+      window.location.href = "/startPage";
+    }).catch((error) => {
+      console.log(error);
+    });
   }
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
+
 
     return (
 
@@ -85,6 +91,8 @@ class StartPage extends Component {
         </header>
       </div>
     );
+
+
   }
 }
 
