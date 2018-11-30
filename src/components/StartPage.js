@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import fire from './config/Fire';
-// import Profile from './Profile';
 import '../resources/scss/style.scss';
 
 
@@ -11,7 +10,6 @@ class StartPage extends Component {
     super(props);
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
     this.logout = this.logout.bind(this);
     this.state = {
       email: '',
@@ -51,16 +49,9 @@ class StartPage extends Component {
 
   }
 
-  signup(e) {
-    e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .catch((error) => {
-
-      })
-  }
   logout() {
     fire.auth().signOut().then((u) => {
-      window.location.href = "/startPage";
+      window.location.href = "/";
     }).catch((error) => {
       console.log(error);
     });
@@ -84,8 +75,7 @@ class StartPage extends Component {
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
             <button onClick={this.login} className="button" id="login">Log in</button>
-            <button className="button" id="gotosignUp"><a href="/Registration">Går till Reg sida</a></button>
-            <button onClick={this.signup} className="button" id="signUp">Test reg databas </button>
+            <button className="button" id="gotosignUp"><a href="/Registration">Skapa konto</a></button>
             <button onClick={this.logout} className="button" id="logout">Log out</button>
           </div>
         </header>

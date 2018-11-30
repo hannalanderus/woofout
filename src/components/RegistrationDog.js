@@ -8,6 +8,7 @@ class RegistrationDog extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
+    this.newDog = this.newDog.bind(this);
     this.state = {
       name: '',
       breed: '',
@@ -33,6 +34,23 @@ class RegistrationDog extends Component {
             alert("Got an error",error); 
              });
 }
+  newDog(e) {
+    e.preventDefault();
+    var db = firebase.firestore();
+    var userdog = firebase.auth().currentUser;
+        db.collection("dog").add({
+        name: this.state.name,
+        breed: this.state.breed,
+        size: this.state.size,
+        weight: this.state.weight,
+        userID: userdog.uid,
+    }).then(function() {
+           alert("Document successfully written!");
+               window.location.href="/RegistrationDog";
+           }).catch(function(error){ 
+            alert("Got an error",error); 
+             });
+}
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -52,6 +70,7 @@ class RegistrationDog extends Component {
             <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
             <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
             <button onClick={this.signup} className="button" id="signUp">KLAR</button>
+            <button onClick={this.newDog} className="button" id="newDog">Lägg till ny hund</button>
     
           </div>
         </header>
