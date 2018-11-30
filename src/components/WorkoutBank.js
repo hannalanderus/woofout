@@ -38,26 +38,6 @@ class Workoutbank extends Component {
     });
   }
 
-  // componentDidMount() {
-  // 
-  //   });
-
-  //   const database = db.collection("trainingprogram");
-
-  //   database.get().then((querySnapshot) => {
-  //     querySnapshot.forEach((databaseCollection) => {
-  //       // console.log(databaseCollection.id, " => ", databaseCollection.data());
-  //       const data = databaseCollection.data();
-  //       this.setState({ data: data });
-  //       // this.setState({ name: data.name });
-  //       // console.log(this.state);
-  //       databaseCollection.docs.map(doc => doc.data())
-
-  //     });
-
-  //   });
-  // }
-
   render() {
 
     return (
