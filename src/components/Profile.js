@@ -25,20 +25,20 @@ class Profile extends Component {
 
 
   componentDidMount() {
-     this.authListener();
+    // this.authListener();
     var current = firebase.auth().currentUser;
     const database = fire.firestore().collection("users").doc("0C6jIHvMXkgI4P2MhaMXswnApaz1");
-    database.get().then(function (doc) {
+  
+    database.get().then((doc) => {
       let profilData = doc.data();
       console.log(profilData);
-
+      this.setState({ data: profilData });
     })
       .catch(function (error) {
         console.log(error);
       })
-    this.setState({
-      data: profilData
-    })
+         
+  }
 
   authListener (){
     fire.auth().onAuthStateChanged((user) => {
@@ -55,19 +55,18 @@ class Profile extends Component {
 
   render() {
 
-
     return (
+      <div className ="App">
+      <div id="headerWrapper">
+          <h1>PROFIL</h1>
+      </div>
          <section className="workoutPage">
         <div className="workoutPage-wrapper">
-          <h2>PROFIL</h2>
-          {this.state.data.map(each =>
-            <ul className="workoutPage-list" key={each.id}>
-              <li>{each.name}</li>
-              <li>{each.surname}</li>
-            </ul>
-          )}
+          <h1>{this.state.data.name}</h1>
+          <h1>{this.state.data.surname}</h1>
         </div>
       </section>
+    </div>
     );
   }
 }
