@@ -11,9 +11,10 @@ class Profile extends Component {
     this.logout = this.logout.bind(this);
     this.state = {
       data: [],
-      user: '',
+
     };
   }
+
   logout() {
     firebase.auth().signOut().then((u) => {
       window.location.href = "/";
@@ -21,6 +22,23 @@ class Profile extends Component {
       console.log(error);
     });
   }
+
+
+  componentDidMount() {
+     this.authListener();
+    var current = firebase.auth().currentUser;
+    const database = fire.firestore().collection("users").doc("0C6jIHvMXkgI4P2MhaMXswnApaz1");
+    database.get().then(function (doc) {
+      let profilData = doc.data();
+      console.log(profilData);
+
+    })
+      .catch(function (error) {
+        console.log(error);
+      })
+    this.setState({
+      data: profilData
+    })
 
   authListener (){
     fire.auth().onAuthStateChanged((user) => {
@@ -32,36 +50,12 @@ class Profile extends Component {
         console.log('ej loggad');
       }
     });
-  }
-
-
-  componentDidMount() {
-    this.authListener();
-    var current = firebase.auth().currentUser;
-    const database = firebase.firestore().collection("users");
-    database.onSnapshot(this.getCollection);
-
-  }
-
-  getCollection = (querySnapshot) => {
-    console.log(this.state.user);
-    const data = [];
-    querySnapshot.forEach((doc) => {
-      const { name, surname } = doc.data();
-      data.push({
-        key: doc.id,
-        doc, // DocumentSnapshot
-        name,
-        surname
-      });
-    });
-    this.setState({
-      data
-    });
 
   }
 
   render() {
+
+
     return (
          <section className="workoutPage">
         <div className="workoutPage-wrapper">
