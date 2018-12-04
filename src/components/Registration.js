@@ -23,6 +23,7 @@ class Registration extends Component {
   
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
       var user = firebase.auth().currentUser;
+      console.log(user);
         db.collection("users").doc(user.uid).set({
           name: this.state.name,
           surname: this.state.surname,
