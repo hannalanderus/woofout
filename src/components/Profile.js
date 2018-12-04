@@ -25,33 +25,30 @@ class Profile extends Component {
 
 
   componentDidMount() {
-    // this.authListener();
-    var current = firebase.auth().currentUser;
-    const database = fire.firestore().collection("users").doc("0C6jIHvMXkgI4P2MhaMXswnApaz1");
-  
-    database.get().then((doc) => {
-      let profilData = doc.data();
-      console.log(profilData);
-      this.setState({ data: profilData });
-    })
-      .catch(function (error) {
-        console.log(error);
-      })
-         
-  }
-
-  authListener (){
     fire.auth().onAuthStateChanged((user) => {
-      console.log(user.uid);
+      var current = firebase.auth().currentUser;
+      const database = fire.firestore().collection("users").doc(current.uid);
+      //console.log(user.uid);
+      //console.log(current.uid);
       if (user) {
         this.setState({ user: user.uid });
         console.log('inloggad');
       } else {
         console.log('ej loggad');
       }
-    });
+      database.get().then((doc) => {
+      let profilData = doc.data();
+      //console.log(profilData);
+      this.setState({ data: profilData });
+    })
+      .catch(function (error) {
+        console.log(error);
+      })
 
+    });
+           
   }
+
 
   render() {
 
