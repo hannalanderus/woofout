@@ -63,6 +63,7 @@ class Profile extends Component {
           <h1>{this.state.data.surname}</h1>
         </div>
       </section>
+      <button className="button"><a href="/ProfileDog">DINA HUNDAR</a></button>
     </div>
     );
   }

@@ -40,6 +40,14 @@ $xl: 1410px;
   justify-content: center;
   padding-top: 50px;
 }
+a{
+  text-decoration: none;
+}
+button{
+  a{
+  color:white;
+  }
+}
 
 // /*.App-header a{
 //   text-decoration: none;
