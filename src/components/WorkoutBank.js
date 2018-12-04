@@ -13,6 +13,8 @@ class Workoutbank extends Component {
       data: []
     };
   }
+
+
   componentDidMount() {
     const database = firebase.firestore().collection('trainingprogram');
     database.onSnapshot(this.getCollection);
