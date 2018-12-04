@@ -10,7 +10,7 @@ class ProfileDog extends Component {
     this.logout = this.logout.bind(this);
     this.state = {
       data: [],
-      id:[],
+      id: [],
     };
   }
 
@@ -27,59 +27,53 @@ class ProfileDog extends Component {
     fire.auth().onAuthStateChanged((user) => {
       var current = firebase.auth().currentUser;
       this.setState({ id: current.uid });
-      const database = fire.firestore().collection("dog").doc("83yCvEVLpp0gYWkxAyXw");/* detta e hund nr 2 "fv2EMZKQcSjCGdKMxo3G"*/
-      console.log(current.uid);
-      if(this.state.data.userID === current){
-        console.log('hej');
-      }if (user) {
-        this.setState({ user: user.uid });
-        console.log('inloggad');
-      } else{
-        console.log('ej loggad');
-      }
-      database.get().then((doc) => {
-      let profilData = doc.data();
-      console.log(profilData);
-      console.log(profilData.userID);
-      this.setState({ data: profilData });
-    })
-      .catch(function (error) {
-        console.log(error);
-      })
 
-    });
-          
+      fire.firestore().collection("dog").where("userID", "==", current.uid)
+        .get()
+        .then((querySnapshot) => {
+          const data = [];
+          querySnapshot.forEach((doc) => {
+            const { name, breed, size, weight, userID } = doc.data();
+            data.push({
+              id: doc.id,
+              doc, // DocumentSnapshot
+              name,
+              breed,
+              size,
+              weight,
+              userID,
+            });
+            //console.log(doc.data());
+          });
+          this.setState({ data });
+        })
+    })
+
   }
 
-
   render() {
+    // console.log(this.state.data)
 
-    if(this.state.data.userID === this.state.id){
-      return(
-      <div className ="App">
+    return (
+      <div className="App">
         <div id="headerWrapper">
           <h1>HUNDAR</h1>
         </div>
-         <section className="workoutPage">
-            <div className="workoutPage-wrapper">
-              <h1>Namn: {this.state.data.name}</h1>
-              <h1>Ras: {this.state.data.breed}</h1>
-              <h1>Storlek: {this.state.data.size}</h1>
-              <h1>Vikt: {this.state.data.weight}</h1>
-            </div>
-         </section>
-    </div>
-        );
-
-    } else {
-      return (
-      <div className ="App">
-              <h1>Inga hundar registrerade</h1>
+        <section className="workoutPage">
+          <div className="workoutPage-wrapper">
+            {this.state.data.map(each =>
+              <ul className="workoutPage-list" key={each.id}>
+                <li>{each.name}</li>
+                <li>{each.breed}</li>
+                <li>{each.size}</li>
+                <li>{each.weight}</li>
+              </ul>
+            )}
+          </div>
+        </section>
       </div>
-      );
-    }
-    
-   }
+    );
+  }
 }
 
 

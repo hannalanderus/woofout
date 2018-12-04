@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import firebase from './config/Fire';
+// import firebase from './config/Fire';
 import fire from './config/Fire';
 import '../resources/scss/style.scss';
 
@@ -16,7 +16,7 @@ class Profile extends Component {
   }
 
   logout() {
-    firebase.auth().signOut().then((u) => {
+    fire.auth().signOut().then((u) => {
       window.location.href = "/";
     }).catch((error) => {
       console.log(error);
@@ -26,7 +26,7 @@ class Profile extends Component {
 
   componentDidMount() {
     fire.auth().onAuthStateChanged((user) => {
-      var current = firebase.auth().currentUser;
+      var current = fire.auth().currentUser;
       const database = fire.firestore().collection("users").doc(current.uid);
       //console.log(user.uid);
       //console.log(current.uid);
@@ -37,34 +37,35 @@ class Profile extends Component {
         console.log('ej loggad');
       }
       database.get().then((doc) => {
-      let profilData = doc.data();
-      //console.log(profilData);
-      this.setState({ data: profilData });
-    })
-      .catch(function (error) {
-        console.log(error);
+        let profilData = doc.data();
+        console.log(profilData);
+        this.setState({ data: profilData });
+
       })
+        .catch(function (error) {
+          console.log(error);
+        })
 
     });
-           
+
   }
 
 
   render() {
 
     return (
-      <div className ="App">
-      <div id="headerWrapper">
+      <div className="App">
+        <div id="headerWrapper">
           <h1>PROFIL</h1>
-      </div>
-         <section className="workoutPage">
-        <div className="workoutPage-wrapper">
-          <h1>{this.state.data.name}</h1>
-          <h1>{this.state.data.surname}</h1>
         </div>
-      </section>
-      <button className="button"><a href="/ProfileDog">DINA HUNDAR</a></button>
-    </div>
+        <section className="workoutPage">
+          <div className="workoutPage-wrapper">
+            <h1>{this.state.data.name}</h1>
+            <h1>{this.state.data.surname}</h1>
+          </div>
+        </section>
+        <button className="button"><a href="/ProfileDog">DINA HUNDAR</a></button>
+      </div>
     );
   }
 }
