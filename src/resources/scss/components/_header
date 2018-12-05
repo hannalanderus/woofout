@@ -1,0 +1,45 @@
+.woofout,
+.profileHeadline,
+.dogs,
+.registartionHeadline{
+	display:none;
+}
+
+/**** StartPage ***/
+.StartPage-wrapper{
+.StartPage-header{
+      .woofout{
+      display:block;
+      }
+    }
+}
+/**** Profile *****/
+.App{
+	&-profile{
+		.StartPage-header{
+			.profileHeadline{
+			display:block;
+			}
+		}
+	}
+}
+/**** ProfileDog *****/
+.App{
+	&-profileDog{
+		.StartPage-header{
+			.dogs{
+			display:block;
+			}
+		}
+	}
+}
+/**** Registration *****/
+.App{
+	&-registration{
+		.StartPage-header{
+			.registartionHeadline{
+			display:block;
+			}
+		}
+	}
+}

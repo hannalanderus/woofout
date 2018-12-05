@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import firebase from './config/Fire';
+import Header from './Header';
 import fire from './config/Fire';
 import '../resources/scss/style.scss';
 
@@ -54,10 +54,10 @@ class Profile extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div className="App-profile">
+      < Header/>
         <div id="headerWrapper">
           <button onClick={this.logout} className="button" id="logout">Log out</button>
-          <h1>PROFIL</h1>
         </div>
         <section className="workoutPage">
           <div className="workoutPage-wrapper">
