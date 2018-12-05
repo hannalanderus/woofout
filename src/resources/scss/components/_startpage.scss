@@ -1,15 +1,55 @@
 @import 'shared/colors';
 
-.inputWrapper{
-  width: 300px;
+
+
+.StartPage{
+&-wrapper{
+  height: 100vh;
+}
+
+&-input{
   display:flex;
   flex-direction: column;
+  background-color: $orange;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display:flex;
+  justify-content: center;
+  padding-top:60px;
+  height:407px;
 
+  #login{
+    display:flex;
+    align-self:center;
+    padding:10px 50px;
+    text-align:center;
+    background-color:$pink;
+    color:$white;
+    font-size:24px;
+    margin:37px 0px 65px 0px;
+  }
+  #losenord{
+    padding-top:17px;
+    color:$white;
+    text-decoration:underline;
+  }
+  #signup{
+    color:$white;
+    background-color:transparent;
+    text-decoration:underline;
+    font-size:22px;
+    padding-bottom:24px;
+  }
 
   input{
-    height: 50px;
-    margin-top:50px;
+    display:flex;
+    align-self:center;
+    margin-top:15px;
+    height: 45px;
+    width:208px;
     background-image: none !important;
     font-size: 0.6em;
+
   }
+}
 }

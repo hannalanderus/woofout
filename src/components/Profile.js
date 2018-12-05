@@ -38,7 +38,7 @@ class Profile extends Component {
       }
       database.get().then((doc) => {
         let profilData = doc.data();
-        console.log(profilData);
+        // console.log(profilData);
         this.setState({ data: profilData });
 
       })
@@ -56,6 +56,7 @@ class Profile extends Component {
     return (
       <div className="App">
         <div id="headerWrapper">
+          <button onClick={this.logout} className="button" id="logout">Log out</button>
           <h1>PROFIL</h1>
         </div>
         <section className="workoutPage">
