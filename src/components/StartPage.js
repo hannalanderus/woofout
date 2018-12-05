@@ -65,20 +65,20 @@ class StartPage extends Component {
 
     return (
 
-      <div className="App">
-        {/*{this.state.user ? (<Profile />) : (<StartPage />)}*/}
-        <div id="headerWrapper">
-          <h1>WOFFOUT</h1>
-        </div>
-        <header className="App-header">
-          <div className="inputWrapper">
+      <div>
+        <div className="StartPage-wrapper">
+          <div className="StartPage header">
+            <h1>Woofout</h1>
+          </div>
+          <div className="StartPage-input">
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
+            <button onClick={this.losenord} className="" id="losenord">Glömt lösenord</button>
             <button onClick={this.login} className="button" id="login">Log in</button>
-            <button className="button" id="gotosignUp"><a href="/Registration">Skapa konto</a></button>
-            <button onClick={this.logout} className="button" id="logout">Log out</button>
+            <button className="button" id="signup"><a href="/Registration">Skapa konto</a></button>
+            {/* <button onClick={this.logout} className="button" id="logout">Log out</button> */}
           </div>
-        </header>
+        </div>
       </div>
     );
 

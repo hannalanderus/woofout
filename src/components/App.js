@@ -16,7 +16,7 @@ class App extends Component {
 
     return (
       <div>
-        <HamburgerMenu />
+        {/* <HamburgerMenu /> */}
         <BrowserRouter>
           <Switch>
             <Route path="/" component={StartPage} exact />
