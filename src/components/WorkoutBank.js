@@ -48,11 +48,11 @@ class Workoutbank extends Component {
           <h2>ÖVNINGSBANK</h2>
           {this.state.data.map(each =>
             <ul className="workoutPage-list" key={each.id}>
-              <li>{each.name}</li>
-              <li>{each.type}</li>
-              <li>{each.purpose}</li>
-              <li>{each.material}</li>
-              <li>{each.description}</li>
+              <li className="listName">{each.name}</li>
+              <li className="listType">{each.type}</li>
+              <li>Syfte:{each.purpose}</li>
+              <li>Material:{each.material}</li>
+              <li>Beskrivning: {each.description}</li>
             </ul>
           )}
         </div>
