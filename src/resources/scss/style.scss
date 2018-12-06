@@ -8,9 +8,12 @@
 @import 'components/profile';
 @import 'components/registration';
 @import 'components/registrationDog';
+@import 'components/profileDog';
 @import 'components/startpage';
 @import 'components/workoutbank';
+@import 'components/header';
 @import 'components/button';
+
 
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Lobster');
@@ -22,7 +25,7 @@ $l: 1050px;
 $xl: 1410px;
 
 
-.header{
+.StartPage-header{
   background-color: #AC0161 ;
   color:white;
   height:260px;

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import fire from './config/Fire';
+import Header from './Header';
 import '../resources/scss/style.scss';
 
 
@@ -67,9 +68,7 @@ class StartPage extends Component {
 
       <div>
         <div className="StartPage-wrapper">
-          <div className="StartPage header">
-            <h1>Woofout</h1>
-          </div>
+         < Header />
           <div className="StartPage-input">
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>

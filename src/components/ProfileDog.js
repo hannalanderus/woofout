@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import fire from './config/Fire';
+import Header from './Header';
 import '../resources/scss/style.scss';
 
 class ProfileDog extends Component {
@@ -55,10 +56,8 @@ class ProfileDog extends Component {
     // console.log(this.state.data)
 
     return (
-      <div className="App">
-        <div id="headerWrapper">
-          <h1>HUNDAR</h1>
-        </div>
+      <div className="App-profileDog">
+       < Header />
         <section className="workoutPage">
           <div className="workoutPage-wrapper">
             {this.state.data.map(each =>

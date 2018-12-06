@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
+import Header from './Header';
 import '../resources/scss/style.scss';
 
 
@@ -47,13 +48,9 @@ class Registration extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div id="headerWrapper">
-          <a href="/"><div className="logo"><h1>WOFFOUT</h1></div></a>
-          <h2>REGISTRERING</h2>
-        </div>
-
-        <header className="App-header-registration blue-gradient">
+      <div className="App-registration">
+        < Header/>
+        <div className="App-header-registration blue-gradient">
           <div className="inputWrapper ">
             <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Förnamn"></input>
             <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn"></input>
@@ -62,7 +59,7 @@ class Registration extends Component {
             <input placeholder="Konfirmera lösenord"></input>
             <button onClick={this.signup} className="button" id="signUp">Registrera</button>
           </div>
-        </header>
+        </div>
       </div >
     );
   }
