@@ -54,18 +54,23 @@ class Profile extends Component {
   render() {
 
     return (
+
       <div className="App-profile">
-      < Header/>
-        <div id="headerWrapper">
-          <button onClick={this.logout} className="button" id="logout">Log out</button>
-        </div>
-        <section className="workoutPage">
-          <div className="workoutPage-wrapper">
-            <h1>{this.state.data.name}</h1>
-            <h1>{this.state.data.surname}</h1>
+        < Header />
+
+        <section className="ProfilePage">
+          <div className="ProfilePage-wrapper">
+            <div className="ProfilePage-userInfo">
+              <h1>{this.state.data.name}</h1>
+              <h1>{this.state.data.surname}</h1>
+            </div>
+            <div className="ProfilePage-listlinks">
+              <a className="dogsButton" href="/ProfileDog">Mina Hundar</a>
+            </div>
           </div>
+          {/* <button onClick={this.logout} className="button" id="logout">Log out</button> */}
         </section>
-        <button className="button"><a href="/ProfileDog">DINA HUNDAR</a></button>
+
       </div>
     );
   }

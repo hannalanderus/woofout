@@ -1,0 +1,38 @@
+@import 'shared/colors';
+
+
+.ProfilePage{
+
+    &-wrapper{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &-userInfo{
+        display:flex;
+        justify-content: center;
+        h1{
+            text-transform: capitalize;
+            padding:5px;
+        }
+    }
+    &-listlinks{
+    text-align:center;
+    margin-top:30px;
+    }
+    .dogsButton{
+        border: $pink solid 2px;
+        padding:10px;
+        color:black;
+        &-visited{
+            color:black;
+        }
+        &:hover{
+            background-color:$pink;
+            color:white;
+            transition: ease all 0.3s;
+        }
+    }
+    
+    }
+
