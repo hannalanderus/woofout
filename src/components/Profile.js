@@ -55,10 +55,10 @@ class Profile extends Component {
 
     return (
       <div className="App">
-        <div id="headerWrapper">
-          <button onClick={this.logout} className="button" id="logout">Log out</button>
-          <h1>PROFIL</h1>
-        </div>
+
+        <button onClick={this.logout} className="button" id="logout">Log out</button>
+        <h1>PROFIL</h1>
+
         <section className="workoutPage">
           <div className="workoutPage-wrapper">
             <h1>{this.state.data.name}</h1>
