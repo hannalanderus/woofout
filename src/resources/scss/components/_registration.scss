@@ -8,3 +8,27 @@
   justify-content: center;
    padding-top: 50px; 
 }
+.RegistrationPage{
+
+   &-form{
+      background-color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      input{
+         padding:10px;
+         border: black solid 1px;
+         margin: 20px 80px 20px 80px;
+      }
+      .regUserButton{
+         padding:20px;
+         background-color:$gray;
+         border:none;
+         width:130px;
+         color:white;
+         text-transform: uppercase;
+         align-self:center;
+
+      }
+   }
+}
