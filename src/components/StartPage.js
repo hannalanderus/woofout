@@ -11,9 +11,12 @@ class StartPage extends Component {
     super(props);
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+    this.losenord = this.losenord.bind(this);
     this.logout = this.logout.bind(this);
     this.state = {
       email: '',
+      emailReset: '',
       password: '',
       user: { user: false }
     }
@@ -57,6 +60,18 @@ class StartPage extends Component {
       console.log(error);
     });
   }
+
+  losenord(e) {
+    e.preventDefault();
+    fire.auth().sendPasswordResetEmail(this.state.emailReset).then((u) => {
+      window.location.href = "/";
+    }).catch(function (error) {
+      console.log(error);
+    });
+  }
+  handleReset(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -68,7 +83,7 @@ class StartPage extends Component {
 
       <div>
         <div className="StartPage-wrapper">
-         < Header />
+          < Header />
           <div className="StartPage-input">
             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
@@ -77,6 +92,11 @@ class StartPage extends Component {
             <button className="button" id="signup"><a href="/Registration">Skapa konto</a></button>
             {/* <button onClick={this.logout} className="button" id="logout">Log out</button> */}
           </div>
+          <form>
+            <h1>Återställ ditt lösenord</h1>
+            <input value={this.state.emailReset} onChange={this.handleChange} id="reset" placeholder="mailadress" type="email" name="emailReset"></input>
+            <button onClick={this.losenord} className="button">Återställ</button>
+          </form>
         </div>
       </div>
     );
