@@ -9,7 +9,7 @@
    padding-top: 50px; 
 }
 .RegistrationPage{
-
+   margin-bottom:20px;
    &-form{
       background-color:white;
       display:flex;
@@ -22,10 +22,9 @@
       }
       .regUserButton{
          padding:20px;
-         background-color:$gray;
+         background-color:$lightgray;
          border:none;
          width:130px;
-         color:white;
          text-transform: uppercase;
          align-self:center;
 
