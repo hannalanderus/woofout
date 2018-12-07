@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import Header from './Header';
+import ImageUpload from './ImageUpload';
 import '../resources/scss/style.scss';
 
 class RegistrationDog extends Component {
@@ -70,6 +71,7 @@ class RegistrationDog extends Component {
           <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
           <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
           <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
+          < ImageUpload />
           <button onClick={this.signup} className="greyButton" id="signUp">KLAR</button>
           <button onClick={this.newDog} className="greyButton" id="newDog">Lägg till ny hund</button>
             </div>
