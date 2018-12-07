@@ -3,40 +3,47 @@
 .StartPage{
 &-wrapper{
   height: 100vh;
+  background-color: $orange;
+  h1{
+    color:$white;
+    font-size:1.5em;
+  }
+  form{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+input{
+    margin-top:15px;
+    height: 45px;
+    width:208px;
+    background-image: none !important;
+    font-size: 0.6em;
+
+  }
+  }
 }
 
 &-input{
   display:flex;
   flex-direction: column;
-  background-color: $orange;
   font-size: calc(10px + 2vmin);
   color: white;
   display:flex;
   justify-content: center;
-  padding-top:60px;
   height:407px;
 
-  #login{
-    display:flex;
-    align-self:center;
-    padding:10px 50px;
-    text-align:center;
-    background-color:$pink;
-    color:$white;
-    font-size:24px;
-    margin:37px 0px 65px 0px;
-  }
-  #losenord{
-    padding-top:17px;
-    color:$white;
-    text-decoration:underline;
-  }
+
   #signup{
     color:$white;
     background-color:transparent;
     text-decoration:underline;
     font-size:22px;
-    padding-bottom:24px;
+    padding-top:60px;
+  }
+
+  #login{
+ margin-top:35px;
   }
 
   input{
@@ -47,9 +54,12 @@
     width:208px;
     background-image: none !important;
     font-size: 0.6em;
-
+    padding-left:10px;
   }
+
 }
+
 }
+
 
 

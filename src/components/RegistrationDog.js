@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
+import Header from './Header';
 import '../resources/scss/style.scss';
 
 class RegistrationDog extends Component {
@@ -58,18 +59,23 @@ class RegistrationDog extends Component {
 
   render() {
     return (
-      <div className="App">
-        <a href="/"><div className="logo"><h1>WOFFOUT</h1></div></a>
-        <h2>REGISTRERING AV DIN HUND</h2>
-        <div className="inputWrapper">
+      <div className="App-registration-dog blue-gradient">
+        < Header />
+        <section className="RegistrationPage">
+          <div className="RegistrationPage-wrapper">
+            <div className="RegistrationPage-form">
+              <h1>Registrering</h1>
+              <h2>Hund</h2>
           <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="namn"></input>
           <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
           <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
           <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
-          <button onClick={this.signup} className="button" id="signUp">KLAR</button>
-          <button onClick={this.newDog} className="button" id="newDog">Lägg till ny hund</button>
-        </div>
-      </div>
+          <button onClick={this.signup} className="greyButton" id="signUp">KLAR</button>
+          <button onClick={this.newDog} className="greyButton" id="newDog">Lägg till ny hund</button>
+            </div>
+          </div>
+        </section>
+      </div >
     );
   }
 }

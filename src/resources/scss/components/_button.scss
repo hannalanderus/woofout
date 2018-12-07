@@ -1,6 +1,44 @@
 @import 'shared/colors';
-.button{
+
+.linkButton{
   border:none;
   cursor: pointer;
   font-size: 0.8em;
+  a{
+  	color:white;
+  }
 }
+.smallLinkButton{
+    padding-top:17px;
+    color:$white;
+    background-color:$orange;
+    border:none;
+    text-decoration:underline;
+     a{
+  	color:white;
+  }
+}
+
+.greyButton{
+	padding:20px;
+    background-color:$lightgray;
+    border:none;
+    width:130px;
+    color:white;
+    text-transform: uppercase;
+    align-self:center;
+    margin-top:20px;
+}
+  .pinkButton{
+ 	padding:15px;
+    background-color:$pink;
+    border:none;
+    width:130px;
+    color:white;
+    align-self:center;
+    margin-top:20px;
+    margin-bottom:20px;
+    text-decoration: underline;
+    //text-underline-position: under;
+
+  }

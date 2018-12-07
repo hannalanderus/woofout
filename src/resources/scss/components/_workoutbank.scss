@@ -7,13 +7,26 @@ justify-content: center;
     display:flex;
     flex-direction:column;
     background-color:$lightblue;
+    padding:100px 50px 50px 50px;
     width:100%;
+    h2{
+    text-align:center;
+    margin-bottom:100px;
+    }
   }
   &-list{
   margin: 0px 36px 80px 36px ;
+  padding:20px;
   background-color:whitesmoke;
   li{
     padding:10px;
+  }
+  .listName{
+    font-size:1em;
+    font-weight: bold;
+  }
+  .listType{
+  text-decoration:underline;
   }
   }
 }

@@ -1,20 +1,31 @@
 @import 'shared/colors';
 
-.App-header-registration{
-   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  color: $white;
-  display:flex;
-  justify-content: center;
-   padding-top: 50px; 
+.App-registration{
+  min-height: 100vh;
+  
 }
 .RegistrationPage{
    margin-bottom:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
    &-form{
       background-color:white;
       display:flex;
       flex-direction:column;
       justify-content: center;
+      width: 100%;
+      margin-top:-150px;
+      padding: 40px 0px 40px 0px;
+      h1{
+      	text-align:center;
+      	font-size:1.5em;
+      }
+      h2{
+      	text-align:center;
+      	font-size:0.9em;
+      }
       input{
          padding:10px;
          border: black solid 1px;
@@ -27,7 +38,9 @@
          width:130px;
          text-transform: uppercase;
          align-self:center;
+         margin-top:20px;
 
       }
+
    }
 }
