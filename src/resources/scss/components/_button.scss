@@ -11,7 +11,7 @@
 .smallLinkButton{
     padding-top:17px;
     color:$white;
-    background-color:$orange;
+    background-color:transparent;
     border:none;
     text-decoration:underline;
      a{
@@ -20,25 +20,50 @@
 }
 
 .greyButton{
-	padding:20px;
-    background-color:$lightgray;
+    background-color:$grayblue;
     border:none;
-    width:130px;
+    width:189px;
+    height:61px;
     color:white;
     text-transform: uppercase;
     align-self:center;
     margin-top:20px;
+    border-radius:30px;
+    margin-bottom:54px;
+    margin-top:46px;
+    letter-spacing:2.3px;
+    font-size:20px;
+
 }
   .pinkButton{
- 	padding:15px;
-    background-color:$pink;
-    border:none;
-    width:130px;
-    color:white;
+   font-size:15px;
+    background-color:$white;
+    border-radius: 24px;
+    border: $white 2px solid;
+    width:135px;
+    height:48px;
+    color:$lightpink;
     align-self:center;
     margin-top:20px;
     margin-bottom:20px;
-    text-decoration: underline;
+    letter-spacing:2.3px;
+    font-size:20px;
     //text-underline-position: under;
 
   }
+
+  .orangeButton{
+    font-size:15px;
+     color:$white;
+     border-radius: 24px;
+     border:none;
+     width:135px;
+     height:48px;
+     background-color:$orange;
+     align-self:center;
+
+     letter-spacing:2.3px;
+     font-size:20px;
+     //text-underline-position: under;
+ 
+   }

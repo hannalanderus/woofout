@@ -49,18 +49,20 @@ class Registration extends Component {
   render() {
     return (
       <div className="App-registration blue-gradient">
-        < Header />
         <section className="RegistrationPage">
           <div className="RegistrationPage-wrapper">
-            <div className="RegistrationPage-form">
-              <h1>Registrering</h1>
+            <span className="logoSpan">Woofout</span>
+            <div className="RegistrationPage-title">
+              <h1>Registrering</h1><br />
               <h2>Användare</h2>
+            </div>
+            <div className="RegistrationPage-form">
               <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Förnamn"></input>
               <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn"></input>
-              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Email"></input>
+              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Mailadress"></input>
               <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
-              <button onClick={this.signup} className="greyButton" id="signUp">Registrera</button>
             </div>
+            <button onClick={this.signup} className="greyButton" id="signUp">KLART</button>
           </div>
         </section>
       </div >

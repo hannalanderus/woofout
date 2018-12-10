@@ -30,7 +30,7 @@ class RegistrationDog extends Component {
       userID: userdog.uid,
     }).then(function () {
       alert("Document successfully written!");
-      window.location.href = "/Profile";
+      window.location.href = "/WorkoutBank";
     }).catch(function (error) {
       alert("Got an error", error);
     });
@@ -59,20 +59,26 @@ class RegistrationDog extends Component {
 
   render() {
     return (
-      <div className="App-registration-dog blue-gradient">
-        < Header />
-        <section className="RegistrationPage">
-          <div className="RegistrationPage-wrapper">
-            <div className="RegistrationPage-form">
-              <h1>Registrering</h1>
-              <h2>Hund</h2>
-          <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="namn"></input>
-          <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
-          <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
-          <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
-          <button onClick={this.signup} className="greyButton" id="signUp">KLAR</button>
-          <button onClick={this.newDog} className="greyButton" id="newDog">Lägg till ny hund</button>
+      <div className="App-registration-dog orange-gradient">
+        <section className="RegistrationDogPage">
+          <div className="RegistrationDogPage-wrapper">
+            <span className="logoSpan">Woofout</span>
+            <div className="RegistrationDogPage-title">
+              <h1>Registrering</h1><br />
+              <h2>Användare</h2>
             </div>
+            <div className="RegistrationDogPage-form">
+              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Namn"></input>
+              <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
+              <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
+              <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
+            </div>
+            <button onClick={this.newDog} className="orangeButton" id="newDog"></button>
+            <div className="gdpr-wrapper">
+              <input type="checkbox" className="checkbox"></input><span class="checkmark"></span><p class="gdpr-text"> Jag godkänner användarvillkoren och
+                att Woofout behandlar mina personuppgifter enligt integritetspolicyn</p>
+            </div>
+            <button onClick={this.signup} className="orangeButton" id="signUp">KLART</button>
           </div>
         </section>
       </div >
