@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Biko';
+    src: url('Biko-Bold.eot');
+    src: url('Biko-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Biko-Bold.woff2') format('woff2'),
+        url('Biko-Bold.woff') format('woff'),
+        url('Biko-Bold.ttf') format('truetype'),
+        url('Biko-Bold.svg#Biko-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Biko';
+    src: url('Biko-Black.eot');
+    src: url('Biko-Black.eot?#iefix') format('embedded-opentype'),
+        url('Biko-Black.woff2') format('woff2'),
+        url('Biko-Black.woff') format('woff'),
+        url('Biko-Black.ttf') format('truetype'),
+        url('Biko-Black.svg#Biko-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Biko';
+    src: url('Biko.eot');
+    src: url('Biko.eot?#iefix') format('embedded-opentype'),
+        url('Biko.woff2') format('woff2'),
+        url('Biko.woff') format('woff'),
+        url('Biko.ttf') format('truetype'),
+        url('Biko.svg#Biko') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
