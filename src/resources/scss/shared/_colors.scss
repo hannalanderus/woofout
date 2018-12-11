@@ -1,16 +1,24 @@
 //font colors
 $black: black;
-$gray: gray;
+$lightgray: #F0F0F0;
 $white: white;
 $pink: #AC0161;
-$orange: rgb(235, 84, 30);
+$lightpink: #E4B5BC;
+$orange: #F77341;
 $yellow: #F5C825;
 $lightblue:  #DCE5EA;
+$grayblue: #94A7D0;
 
 //gradients
 
 .blue-gradient{
-    background: linear-gradient( #E6E8EC,#C1CAD5);
+    background:  linear-gradient(to bottom, rgba(203,207,216,1), rgba(208,211,216,0.5))
+
+}
+
+.orange-gradient{
+    background:  linear-gradient(to bottom, rgba(247,115,65,1), rgba(255,169,126,0.7))
+
 }
 
 .bg-yellow{

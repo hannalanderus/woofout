@@ -8,13 +8,10 @@ class ResetPassword extends Component {
 
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.losenord = this.losenord.bind(this);
     this.state = {
-      email: '',
       emailReset: '',
-      password: '',
       user: { user: false }
     }
   }
@@ -43,16 +40,12 @@ class ResetPassword extends Component {
     fire.auth().sendPasswordResetEmail(this.state.emailReset).then((u) => {
       window.location.href = "/";
     }).catch(function (error) {
-      console.log(error);
+      alert('Du måste fylla i en mailadress');
     });
   }
   handleReset(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
-
   render() {
 
 
@@ -63,7 +56,7 @@ class ResetPassword extends Component {
           < Header />
           <form>
             <h1>Återställ ditt lösenord</h1>
-            <input value={this.state.emailReset} onChange={this.handleChange} id="reset" placeholder="mailadress" type="email" name="emailReset"></input>
+            <input value={this.state.emailReset} onChange={this.handleReset} id="reset" placeholder="mailadress" type="emailReset" name="emailReset"></input>
             <button onClick={this.losenord} className="smallLinkButton">Återställ</button>
           </form>
         </div>

@@ -17,6 +17,7 @@
 
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import 'shared/fonts';
 
 // Gone is the desktop, table and mobile. Let's use s, m, l, xl.
 $s: 500px;
@@ -26,15 +27,16 @@ $xl: 1410px;
 
 
 .StartPage-header{
-  background-color: #AC0161 ;
+  // background-color: #AC0161 ;
   color:white;
-  height:260px;
+  padding: 102px 93px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Lobster', cursive;
   font-size:36px;
+  text-decoration: underline;
 }
 // .App {
 //   text-align: center;
@@ -52,7 +54,14 @@ a{
   text-decoration: none;
 }
 
-
+.logoSpan{
+   color:$white;
+   font-family: 'Lobster', cursive;
+   padding-left:15px;
+   padding-top:6px;
+   font-size:27px;
+   text-decoration:underline;
+}
 // /*.App-header a{
 //   text-decoration: none;
 //   color:White;

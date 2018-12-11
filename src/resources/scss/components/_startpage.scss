@@ -3,7 +3,12 @@
 .StartPage{
 &-wrapper{
   height: 100vh;
-  background-color: $orange;
+  background:linear-gradient(1deg, #f7b892,#e4b5bc, #c3cbd6);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 20s ease infinite;
+-moz-animation: AnimationName 20s ease infinite;
+animation: AnimationName 20s ease infinite;
+  }
   h1{
     color:$white;
     font-size:1.5em;
@@ -19,9 +24,10 @@ input{
     width:208px;
     background-image: none !important;
     font-size: 0.6em;
+
   }
   }
-}
+
 
 &-input{
   display:flex;
@@ -30,15 +36,20 @@ input{
   color: white;
   display:flex;
   justify-content: center;
-  padding-top:60px;
-  height:407px;
+
 
   #signup{
     color:$white;
     background-color:transparent;
     text-decoration:underline;
     font-size:22px;
-    padding-bottom:24px;
+    padding-top:60px;
+  }
+
+  #login{
+ margin-top:35px;
+ text-transform: uppercase;
+ letter-spacing: 2.3px;
   }
 
   input{
@@ -47,13 +58,32 @@ input{
     margin-top:15px;
     height: 45px;
     width:208px;
-    background-image: none !important;
+    background-color:transparent;
+    border: 1px solid $white;
     font-size: 0.6em;
-
+    padding-left:10px;
+    &::placeholder{
+      color:white;
+    }
   }
 
 }
 
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes AnimationName { 
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
 }
 
 

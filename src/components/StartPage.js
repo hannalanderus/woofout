@@ -84,13 +84,13 @@ class StartPage extends Component {
         <div className="StartPage-wrapper">
           < Header />
           <div className="StartPage-input">
-            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Användarnamn"></input>
+            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Mailadress"></input>
             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
             <button className="smallLinkButton" id="losenord"><a href="/ResetPassword">Glömt lösenord</a></button>
             <button onClick={this.login} className="pinkButton" id="login">Logga in</button>
             <button className="linkButton" id="signup"><a href="/Registration">Skapa konto</a></button>
           </div>
-         {/* <form>
+          {/* <form>
             <h1>Återställ ditt lösenord</h1>
             <input value={this.state.emailReset} onChange={this.handleChange} id="reset" placeholder="mailadress" type="email" name="emailReset"></input>
             <button onClick={this.losenord} className="smallLinkButton">Återställ</button>
