@@ -66,7 +66,7 @@ class RegistrationDog extends Component {
             <span className="logoSpan">Woofout</span>
             <div className="RegistrationDogPage-title">
               <h1>Registrering</h1><br />
-              <h2>Användare</h2>
+              <h2>Hund</h2>
             </div>
             <div className="RegistrationDogPage-form">
               <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Namn"></input>

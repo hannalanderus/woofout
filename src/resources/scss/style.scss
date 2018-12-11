@@ -26,16 +26,19 @@ $l: 1050px;
 $xl: 1410px;
 
 .StartPage-header{
-  // background-color: #AC0161 ;
   color:white;
   padding: 102px 93px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Lobster', cursive;
-  font-size:36px;
-  text-decoration: underline;
+  h1{
+    font-family: 'Lobster', cursive;
+    font-size:64px;
+    text-decoration: underline;
+    font-weight:normal;
+  }
+
 }
 // .App {
 //   text-align: center;

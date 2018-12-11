@@ -1,5 +1,8 @@
+
+//BIKO
+
 @font-face {
-    font-family: 'Biko-Black';
+    font-family: 'Biko';
     src: url('/resources/fonts/biko/Biko-Black.eot');
     src: url('/resources/fonts/biko/Biko-Black.eot?#iefix') format('embedded-opentype'),
         url('/resources/fonts/biko/Biko-Black.woff2') format('woff2'),
@@ -10,7 +13,7 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Biko-Bold';
+    font-family: 'Biko';
     src: url('/resources/fonts/biko/Biko-Bold.eot');
     src: url('/resources/fonts/biko/Biko-Bold.eot?#iefix') format('embedded-opentype'),
         url('/resources/fonts/biko/Biko-Bold.woff2') format('woff2'),
@@ -22,7 +25,7 @@
 }
 
 @font-face {
-    font-family: 'Biko-Regular';
+    font-family: 'Biko';
     src: url('/resources/fonts/biko/Biko.eot');
     src: url('/resources/fonts/biko/Biko.eot?#iefix') format('embedded-opentype'),
         url('/resources/fonts/biko/Biko.woff2') format('woff2'),
@@ -32,4 +35,42 @@
     font-weight: normal;
     font-style: normal;
 }
+
+//AVENIR
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('/resources/fonts/avenir/AvenirLTStd-Light.eot');
+    src: url('/resources/fonts/avenir/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/avenir/AvenirLTStd-Light.woff2') format('woff2'),
+        url('/resources/fonts/avenir/AvenirLTStd-Light.woff') format('woff'),
+        url('/resources/fonts/avenir/AvenirLTStd-Light.ttf') format('truetype'),
+        url('/resources/fonts/avenir/AvenirLTStd-Light.svg#AvenirLTStd-Light') format('svg');
+        font-weight: 300;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('/resources/fonts/avenir/Avenir-Medium.eot');
+    src: url('/resources/fonts/avenir/Avenir-Medium..eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/avenir/Avenir-Medium..woff2') format('woff2'),
+        url('/resources/fonts/avenir/Avenir-Medium..woff') format('woff'),
+        url('/resources/fonts/avenir/Avenir-Medium..ttf') format('truetype'),
+        url('/resources/fonts/avenir/Avenir-Medium..svg#Biko-Black') format('svg');
+        font-weight: 500;
+        font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('/resources/fonts/avenir/AvenirLTStd-Black.eot');
+    src: url('/resources/fonts/avenir/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/avenir/AvenirLTStd-Black.woff2') format('woff2'),
+        url('/resources/fonts/avenir/AvenirLTStd-Black.woff') format('woff'),
+        url('/resources/fonts/avenir/AvenirLTStd-Black.ttf') format('truetype'),
+        url('/resources/fonts/avenir/AvenirLTStd-Black.svg#Biko') format('svg');
+        font-weight: 900;
+        font-style: normal;
+}
+
 
