@@ -39,13 +39,14 @@ handleChangeImage (e) {
   console.log(JSON.stringify(firebase.storage))
   if(e.target.files[0]){
   const image = e.target.files[0];
-  this.setState({ image });
+  this.setState({ 'image' : image });
   }
   }
   handleChangeUploadImage (e){
     e.preventDefault();
-    const { image } = this.state;
-    const upload = storage.ref(`images/${image.name}`).put(image);
+    let image = this.state.image;
+    console.log(image.name);
+    const upload = storage.ref('images/' + image.name).put(image);
     upload.on('state_changed',
     (snapshot) => {
     //progress function
@@ -68,9 +69,9 @@ handleChangeImage (e) {
   render() {
   console.log(this.state.image);
     return (
-      <div>
+      <div className="RegistrationDogPage-form">
         <input onChange={this.handleChangeImage} type="file"></input>
-        <button onClick={this.handleChangeUploadImage} className="greyButton">Ladda upp</button>
+        <button onClick={this.handleChangeUploadImage} className="greyButton">Ladda upp Bild test</button>
       </div>
     );
   }

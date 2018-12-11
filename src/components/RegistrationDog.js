@@ -73,10 +73,11 @@ class RegistrationDog extends Component {
               <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
               <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
               <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
+              < ImageUpload />
             </div>
             <button onClick={this.newDog} className="orangeButton" id="newDog"></button>
             <div className="gdpr-wrapper">
-              <input type="checkbox" className="checkbox"></input><span class="checkmark"></span><p class="gdpr-text"> Jag godkänner användarvillkoren och
+              <input type="checkbox" className="checkbox"></input><span className="checkmark"></span><p className="gdpr-text"> Jag godkänner användarvillkoren och
                 att Woofout behandlar mina personuppgifter enligt integritetspolicyn</p>
             </div>
             <button onClick={this.signup} className="orangeButton" id="signUp">KLART</button>
