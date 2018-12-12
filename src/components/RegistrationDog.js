@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
-import Header from './Header';
 import Menu from './Menu';
+//import Header from './Header';
+
 import ImageUpload from './ImageUpload';
 import '../resources/scss/style.scss';
 
@@ -32,7 +33,7 @@ class RegistrationDog extends Component {
       userID: userdog.uid,
     }).then(function () {
       alert("Document successfully written!");
-      window.location.href = "/WorkoutBank";
+      window.location.href = "/Profile";
     }).catch(function (error) {
       alert("Got an error", error);
     });
