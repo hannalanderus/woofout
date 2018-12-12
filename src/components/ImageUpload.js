@@ -1,56 +1,50 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import storage from './config/Fire';
-import Header from './Header';
 import '../resources/scss/style.scss';
 
 
 class ImageUpload extends Component {
 
+
   constructor(props) {
     super(props);
     this.handleChangeImage = this.handleChangeImage.bind(this);
     this.handleChangeUploadImage = this.handleChangeUploadImage.bind(this);
-    this.newDog = this.newDog.bind(this);
     this.state = {
      image: null,
      url: '',
     }
   }
-  newDog(e) {
-    e.preventDefault();
-    var db = firebase.firestore();
-    var userdog = firebase.auth().currentUser;
-    db.collection("dog").add({
-      name: this.state.name,
-      breed: this.state.breed,
-      size: this.state.size,
-      weight: this.state.weight,
-      userID: userdog.uid,
-    }).then(function () {
-      alert("Document successfully written!");
-      window.location.href = "/RegistrationDog";
-    }).catch(function (error) {
-      alert("Got an error", error);
-    });
-  }
+ 
 
 handleChangeImage (e) {
-  console.log(JSON.stringify(firebase.storage))
+  //so you can see  preview of the image and save/store file
+  let preview = document.querySelector('img');
+  let file    = document.querySelector('input[type=file]').files[0];
+  let reader  = new FileReader();
+  //preview of the image
+  reader.addEventListener("load",() => {
+    preview.src = reader.result;
+  }, false);
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+  //udate state
   if(e.target.files[0]){
   const image = e.target.files[0];
   this.setState({ 'image' : image });
   }
   }
+
   handleChangeUploadImage (e){
+    //send the image to storage in firebase
     e.preventDefault();
     let image = this.state.image;
-    console.log(image.name);
-    const upload = storage.ref('images/' + image.name).put(image);
-    upload.on('state_changed',
-    (snapshot) => {
-    //progress function
-
+    //create folder (test is the name of the folder, dont know how to change it now after testing), with image
+    let storageRef = firebase.storage().ref();
+    let imageRef = storageRef.child('test/' + image.name).put(image);
+    return imageRef.on('state_changed',(snapshot) => {
     }, 
     (error) => {
     //error function
@@ -59,7 +53,7 @@ handleChangeImage (e) {
     },
     () => {
     //complete function
-    storage.ref('images').child(image.name).getDownloadURL().then(url =>{
+    storageRef.child('test/' + image.name).getDownloadURL().then(url =>{
       console.log(url);
     })
 
@@ -67,10 +61,10 @@ handleChangeImage (e) {
   }
 
   render() {
-  console.log(this.state.image);
     return (
       <div className="RegistrationDogPage-form">
         <input onChange={this.handleChangeImage} type="file"></input>
+        <img src="" className="addedImage" alt="Image preview..."></img>
         <button onClick={this.handleChangeUploadImage} className="greyButton">Ladda upp Bild test</button>
       </div>
     );
