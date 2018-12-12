@@ -29,8 +29,7 @@ class Profile extends Component {
     fire.auth().onAuthStateChanged((user) => {
       var current = fire.auth().currentUser;
       const database = fire.firestore().collection("users").doc(current.uid);
-      //console.log(user.uid);
-      //console.log(current.uid);
+
       if (user) {
         this.setState({ user: user.uid });
         console.log('inloggad');
@@ -39,7 +38,7 @@ class Profile extends Component {
       }
       database.get().then((doc) => {
         let profilData = doc.data();
-        // console.log(profilData);
+
         this.setState({ data: profilData });
 
       })
@@ -60,7 +59,7 @@ class Profile extends Component {
         <section className="ProfilePage">
 
           <div className="custom-header">
-            <div className="RegistrationPage-title">
+            <div className="ProfilePage-title">
               <h1>Profil</h1><br />
             </div>
             <div className="ProfilePage-userInfo">

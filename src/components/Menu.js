@@ -11,11 +11,11 @@ class Menu extends Component {
 
             <div>
                 <ul className="navMenu">
-                    <a href="/">Start</a>
-                    <a href="/Profile">Profil</a>
-                    <a href="/ProfileDog">Profil Hund</a>
-                    <a href="/WorkoutBank">Övningsbank</a>
-                    <a href="/WorkoutLogg">Träningslogg</a>
+                    <a className="profileIcon" href="/Profile">Profil</a>
+                    <a className="profileDogIcon" href="/ProfileDog">Profil Hund</a>
+                    <a className="regDogIcon" href="/RegistrationDog">Lägg till hund</a>
+                    <a className="workoutBankIcon" href="/WorkoutBank">Övningsbank</a>
+                    <a className="workoutLoggIcon" href="/WorkoutLogg">Träningslogg</a>
                 </ul>
             </div>
         )

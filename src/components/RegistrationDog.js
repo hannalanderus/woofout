@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import Header from './Header';
+import Menu from './Menu';
 import ImageUpload from './ImageUpload';
 import '../resources/scss/style.scss';
 
@@ -83,6 +84,7 @@ class RegistrationDog extends Component {
             <button onClick={this.signup} className="orangeButton" id="signUp">KLART</button>
           </div>
         </section>
+        <Menu />
       </div >
     );
   }
