@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from './config/Fire';
 import fire from './config/Fire';
 import Header from './Header';
+import Menu from './Menu';
 import '../resources/scss/style.scss';
 
 class ProfileDog extends Component {
@@ -66,15 +67,21 @@ class ProfileDog extends Component {
   }
 
   render() {
+
     console.log(this.state.url)
+
 
     return (
       <div className="App-profileDog">
-       < Header />
-        <section className="workoutPage">
-          <div className="workoutPage-wrapper">
+        <section className="ProfileDog">
+          <div className="custom-headerDog">
+            <div className="ProfileDogPage-title">
+              <h1>MINA HUNDAR</h1><br />
+            </div>
+          </div>
+          <div className="ProfileDogPage-wrapper">
             {this.state.data.map(each =>
-              <ul className="workoutPage-list" key={each.id}>
+              <ul className="ProfileDogPage-list" key={each.id}>
                 <li>{each.name}</li>
                 <li>{each.breed}</li>
                 <li>{each.size}</li>
@@ -82,8 +89,10 @@ class ProfileDog extends Component {
                 <img src={ this.state.image } className="addedImage" alt="test" />
               </ul>
             )}
+
           </div>
         </section>
+        <Menu />
       </div>
     );
   }

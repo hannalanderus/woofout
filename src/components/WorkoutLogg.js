@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire.js';
+import Menu from './Menu';
 import '../resources/scss/style.scss';
 
 class WorkoutLogg extends Component {

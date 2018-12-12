@@ -13,11 +13,13 @@
 @import 'components/workoutbank';
 @import 'components/header';
 @import 'components/button';
+@import 'components/menu';
 
 
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Lobster');
-@import 'shared/fonts';
+
+// @import 'shared/fonts'; FUNKAR INTE :(
 
 // Gone is the desktop, table and mobile. Let's use s, m, l, xl.
 $s: 500px;
@@ -26,18 +28,17 @@ $l: 1050px;
 $xl: 1410px;
 
 .StartPage-header{
-  color:white;
-  padding: 102px 93px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align:center;
+ 
   h1{
+    color:$white;
     font-family: 'Lobster', cursive;
     font-size:64px;
     text-decoration: underline;
     font-weight:normal;
+    padding: 102px 0px 93px 0px;
   }
+
 
 }
 // .App {

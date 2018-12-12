@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Menu from './Menu';
 import fire from './config/Fire';
 import '../resources/scss/style.scss';
 
@@ -28,8 +29,7 @@ class Profile extends Component {
     fire.auth().onAuthStateChanged((user) => {
       var current = fire.auth().currentUser;
       const database = fire.firestore().collection("users").doc(current.uid);
-      //console.log(user.uid);
-      //console.log(current.uid);
+
       if (user) {
         this.setState({ user: user.uid });
         console.log('inloggad');
@@ -38,7 +38,7 @@ class Profile extends Component {
       }
       database.get().then((doc) => {
         let profilData = doc.data();
-        // console.log(profilData);
+
         this.setState({ data: profilData });
 
       })
@@ -56,21 +56,25 @@ class Profile extends Component {
     return (
 
       <div className="App-profile">
-        < Header />
-
         <section className="ProfilePage">
-          <div className="ProfilePage-wrapper">
-            <div className="ProfilePage-userInfo">
-              <h1>{this.state.data.name}</h1>
-              <h1>{this.state.data.surname}</h1>
+
+          <div className="custom-header">
+            <div className="ProfilePage-title">
+              <h1>Profil</h1><br />
             </div>
-            <div className="ProfilePage-listlinks">
-              <a className="dogsButton" href="/ProfileDog">Mina Hundar</a>
+            <div className="ProfilePage-userInfo">
+              <h2>{this.state.data.name}</h2>
+              <h2>{this.state.data.surname}</h2>
+            </div>
+            <div className="ProfilePage-wrapper">
+              <div className="ProfilePage-listlinks">
+                <a className="dogsButton" href="/ProfileDog">Mina Hundar</a>
+              </div>
             </div>
           </div>
           {/* <button onClick={this.logout} className="button" id="logout">Log out</button> */}
         </section>
-
+        <Menu />
       </div>
     );
   }
