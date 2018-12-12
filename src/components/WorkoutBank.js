@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire.js';
+import Menu from './Menu';
 import '../resources/scss/style.scss';
 
 
@@ -24,12 +25,12 @@ class Workoutbank extends Component {
   getCollection = (querySnapshot) => {
     const data = [];
     querySnapshot.forEach((doc) => {
-      const { name, type, purpose, description, material } = doc.data();
+      const { name, category, purpose, description, material } = doc.data();
       data.push({
         key: doc.id,
         doc, // DocumentSnapshot
         name,
-        type,
+        category,
         material,
         purpose,
         description
@@ -49,13 +50,14 @@ class Workoutbank extends Component {
           {this.state.data.map(each =>
             <ul className="workoutPage-list" key={each.id}>
               <li className="listName">{each.name}</li>
-              <li className="listType">{each.type}</li>
+              <li className="listType">{each.category}</li>
               <li>Syfte:{each.purpose}</li>
               <li>Material:{each.material}</li>
               <li>Beskrivning: {each.description}</li>
             </ul>
           )}
         </div>
+        <Menu />
       </section>
     );
   }

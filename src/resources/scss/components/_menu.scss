@@ -1,0 +1,12 @@
+@import 'shared/colors';
+
+.navMenu{
+    display: flex;
+    justify-content: center;
+    align-content:flex-end;
+    background-color:$lightgray;
+    padding:10px 10px 0px 10px;
+    a{
+        padding:10px;
+    }
+}

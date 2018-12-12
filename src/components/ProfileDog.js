@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from './config/Fire';
 import fire from './config/Fire';
 import Header from './Header';
+import Menu from './Menu';
 import '../resources/scss/style.scss';
 
 class ProfileDog extends Component {
@@ -57,7 +58,7 @@ class ProfileDog extends Component {
 
     return (
       <div className="App-profileDog">
-       < Header />
+        < Header />
         <section className="workoutPage">
           <div className="workoutPage-wrapper">
             {this.state.data.map(each =>
@@ -70,6 +71,7 @@ class ProfileDog extends Component {
             )}
           </div>
         </section>
+        <Menu />
       </div>
     );
   }

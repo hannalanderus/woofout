@@ -13,6 +13,7 @@
 @import 'components/workoutbank';
 @import 'components/header';
 @import 'components/button';
+@import 'components/menu';
 
 
 //fonts
@@ -26,32 +27,19 @@ $m: 800px;
 $l: 1050px;
 $xl: 1410px;
 
-
 .StartPage-header{
-  position:relative;
-  color:white;
-  padding: 102px 93px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Lobster', cursive;
-  font-size:36px;
-  text-decoration: underline;
-  &::before{
-    background-color:$lightpink;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 400px;
-    top: -50;
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
-    -webkit-transform: skewY(-20deg);
-    transform: skewY(-20deg);
-    z-index: -100;
-    margin-top: -150px;
+  text-align:center;
+ 
+  h1{
+    color:$white;
+    font-family: 'Lobster', cursive;
+    font-size:64px;
+    text-decoration: underline;
+    font-weight:normal;
+    padding: 102px 0px 93px 0px;
   }
+
+
 }
 // .App {
 //   text-align: center;

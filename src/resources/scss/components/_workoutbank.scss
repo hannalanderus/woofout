@@ -1,13 +1,10 @@
 @import 'shared/colors';
 
 .workoutPage{
-display:flex;
-justify-content: center;
   &-wrapper{
     display:flex;
     flex-direction:column;
     background-color:$lightblue;
-    padding:100px 50px 50px 50px;
     width:100%;
     h2{
     text-align:center;

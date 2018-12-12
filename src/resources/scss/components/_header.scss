@@ -9,7 +9,7 @@
 .StartPage-wrapper{
 .StartPage-header{
       .woofout{
-      display:none;
+      display:block;
       }
     }
 }
@@ -18,7 +18,7 @@
 	&-profile{
 		.StartPage-header{
 			.profileHeadline{
-			display:block;
+			display:none;
 			}
 		}
 	}

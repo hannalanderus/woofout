@@ -56,7 +56,6 @@ a:hover {
 }
 
 h1 {
-    font-size: 42px;
     margin: 0.67em 0;
 }
 
@@ -233,7 +232,7 @@ h4,
 h5,
 h6{
     margin: 0;
-    font-weight: normal;
+   
 }
 
 ul{
@@ -245,4 +244,23 @@ li{
 }
 a{
     text-decoration:none;
+        font-family: 'Biko';
+        font-weight: normal;
+        font-style: normal;
+   
+}
+button{
+    font-family: 'Biko';
+    font-weight: normal;
+    font-style: normal;
+}
+input{
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-style: normal;
+}
+p{
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-style: normal;
 }

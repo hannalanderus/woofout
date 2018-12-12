@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import Header from './Header';
+import ImageUpload from './ImageUpload';
 import '../resources/scss/style.scss';
 
 class RegistrationDog extends Component {
@@ -65,17 +66,18 @@ class RegistrationDog extends Component {
             <span className="logoSpan">Woofout</span>
             <div className="RegistrationDogPage-title">
               <h1>Registrering</h1><br />
-              <h2>Användare</h2>
+              <h2>Hund</h2>
             </div>
             <div className="RegistrationDogPage-form">
               <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Namn"></input>
               <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
               <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
               <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
+              < ImageUpload />
             </div>
             <button onClick={this.newDog} className="orangeButton" id="newDog"></button>
             <div className="gdpr-wrapper">
-              <input type="checkbox" className="checkbox"></input><span class="checkmark"></span><p class="gdpr-text"> Jag godkänner användarvillkoren och
+              <input type="checkbox" className="checkbox"></input><span className="checkmark"></span><p className="gdpr-text"> Jag godkänner användarvillkoren och
                 att Woofout behandlar mina personuppgifter enligt integritetspolicyn</p>
             </div>
             <button onClick={this.signup} className="orangeButton" id="signUp">KLART</button>
