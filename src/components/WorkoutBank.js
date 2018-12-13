@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire.js';
 import Menu from './Menu';
+import Filter from './Filter';
 import '../resources/scss/style.scss';
 
 
@@ -47,17 +48,9 @@ class Workoutbank extends Component {
       <section className="workoutPage">
         <div className="workoutPage-wrapper">
           <h2>ÖVNINGSBANK</h2>
-          {this.state.data.map(each =>
-            <ul className="workoutPage-list" key={each.id}>
-              <li className="listName">{each.name}</li>
-              <li className="listType">{each.category}</li>
-              <li>Syfte:{each.purpose}</li>
-              <li>Material:{each.material}</li>
-              <li>Beskrivning: {each.description}</li>
-            </ul>
-          )}
+          <Filter />
+          <Menu />
         </div>
-        <Menu />
       </section>
     );
   }

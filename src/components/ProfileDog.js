@@ -28,42 +28,48 @@ class ProfileDog extends Component {
 
   componentDidMount() {
     fire.auth().onAuthStateChanged((user) => {
-     /**display image***/
-      let image = this.state.image;
-      let storageRef = firebase.storage().ref();
-      let imageRef = storageRef.child('test/' + image);
-      console.log(imageRef);
-      //this.setState({ image: 'https://firebasestorage.googleapis.com/v0/b/woofout-36aca.appspot.com/o/test%2Fbossebulldog.jpg?alt=media&token=254b8be0-1816-4987-9e81-e4457bc40df6' })    
-      storageRef.child('test/' + image.name).getDownloadURL().then(url =>{
-      this.setState({ url : url });
-      
-    })
-        console.log(this.state.url);
-    /****************************************/
-      var current = firebase.auth().currentUser;
-      this.setState({ id: current.uid });
-      fire.firestore().collection("dog").where("userID", "==", current.uid)
-        .get()
-        .then((querySnapshot) => {
-          const data = [];
-          querySnapshot.forEach((doc) => {
-            const { name, breed, size, weight, userID, image } = doc.data();
-            data.push({
-              id: doc.id,
-              doc, // DocumentSnapshot
-              name,
-              breed,
-              size,
-              weight,
-              userID,
-              image,
-            });
-            //console.log(this.state.image);
-          });
-          this.setState({ data });
-        })
-    })
+      /**display image***/
+      // let image = this.state.image;
 
+      // let imageRef = storageRef.child('test/bosseBulldog.jpg');
+      // console.log(imageRef);
+      // storageRef.child('test/' + image.name).getDownloadURL().then(url => {
+      //   this.setState({ image: image })
+      firebase.auth().onAuthStateChanged((user) => {
+        var current = firebase.auth().currentUser.uid;
+        // })
+        var storageRef = firebase.storage().ref("test/" + current + '.jpg');
+        storageRef.getDownloadURL().then(url => {
+          console.log(url);
+          this.setState({ url: url })
+
+        })
+        console.log(storageRef);
+        /****************************************/
+
+        this.setState({ id: current.uid });
+        fire.firestore().collection("dog").where("userID", "==", current)
+          .get()
+          .then((querySnapshot) => {
+            const data = [];
+            querySnapshot.forEach((doc) => {
+              const { name, breed, size, weight, userID, image } = doc.data();
+              data.push({
+                id: doc.id,
+                doc, // DocumentSnapshot
+                name,
+                breed,
+                size,
+                weight,
+                userID,
+                image,
+              });
+              //console.log(this.state.image);
+            });
+            this.setState({ data });
+          })
+      })
+    })
   }
 
   render() {
@@ -86,7 +92,7 @@ class ProfileDog extends Component {
                 <li>{each.breed}</li>
                 <li>{each.size}</li>
                 <li>{each.weight}</li>
-                <img src={ this.state.image } className="addedImage" alt="test" />
+                <img src={this.state.url} className="addedImage" alt="test" />
               </ul>
             )}
 
