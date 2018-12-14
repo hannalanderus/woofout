@@ -86,13 +86,17 @@ class ProfileDog extends Component {
             </div>
           </div>
           <div className="ProfileDogPage-wrapper">
+          <div className="flexWrapper">
+          <div className="imageWrapper">
+          <img src={this.state.url} className="addedImage" alt="test" />
+          </div>
+          </div>
             {this.state.data.map(each =>
               <ul className="ProfileDogPage-list" key={each.id}>
                 <li>{each.name}</li>
                 <li>{each.breed}</li>
                 <li>{each.size}</li>
                 <li>{each.weight}</li>
-                <img src={this.state.url} className="addedImage" alt="test" />
               </ul>
             )}
 

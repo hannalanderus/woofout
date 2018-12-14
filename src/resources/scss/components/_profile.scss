@@ -46,19 +46,22 @@
     }
     &-listlinks{
     text-align:center;
+    display:flex;
+    flex-direction:column;
+        a{
+        color: $lightpink;
+        }
     }
-    .dogsButton{
-        border: $pink solid 2px;
-        padding:10px;
-        color:black;
+    .whiteButton{
         &-visited{
             color:black;
         }
         &:hover{
-            background-color:$pink;
-            color:white;
+            color: #555;
+            background: #f5f5f5;
             transition: ease all 0.3s;
         }
+
     }
     .custom-header{
         position:relative;
@@ -87,6 +90,31 @@
         }
     }
    
+   .flexWrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      .imageWrapper{
+        border:solid $white;
+        border-radius: 50%;
+        width:200px;
+        height:200px;
+        overflow: hidden;
+        position:relative;
+
+        .addedImage{
+                position:absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                height: 250px;
+                width: auto;
+        }
+
+   }
+
+   }
+
     
     }
 
