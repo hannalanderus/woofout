@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
+import ImageUploadProfile from './ImageUploadProfile';
 //import Header from './Header';
 import '../resources/scss/style.scss';
 
@@ -62,6 +63,7 @@ class Registration extends Component {
               <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Mailadress"></input>
               <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
             </div>
+            < ImageUploadProfile/>
             <button onClick={this.signup} className="greyButton" id="signUp">KLART</button>
           </div>
         </section>

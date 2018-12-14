@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase from './config/Fire';
 import Header from './Header';
 import Menu from './Menu';
 import fire from './config/Fire';
@@ -24,11 +25,20 @@ class Profile extends Component {
     });
   }
 
-
   componentDidMount() {
     fire.auth().onAuthStateChanged((user) => {
       var current = fire.auth().currentUser;
       const database = fire.firestore().collection("users").doc(current.uid);
+   /****************** Show Profile image **********************/
+      var current = firebase.auth().currentUser.uid;
+        // })
+      var storageRef = firebase.storage().ref("profileimage/" + current + '.jpg');
+      storageRef.getDownloadURL().then(url => {
+          console.log(url);
+          this.setState({ url: url })
+
+        })    
+  /****************************************/
 
       if (user) {
         this.setState({ user: user.uid });
@@ -50,7 +60,6 @@ class Profile extends Component {
 
   }
 
-
   render() {
 
     return (
@@ -61,18 +70,25 @@ class Profile extends Component {
           <div className="custom-header">
             <div className="ProfilePage-title">
               <h1>Profil</h1><br />
+              
+
             </div>
             <div className="ProfilePage-userInfo">
               <h2>{this.state.data.name}</h2>
               <h2>{this.state.data.surname}</h2>
             </div>
+            <div className="flexWrapper">
+            <div className="imageWrapper">
+            <img src={this.state.url} className="addedImage" alt="test" />
+            </div>
+            </div>
             <div className="ProfilePage-wrapper">
               <div className="ProfilePage-listlinks">
-                <a className="dogsButton" href="/ProfileDog">Mina Hundar</a>
+               <a className="profileLink" href="/ProfileDog"><button className="whiteButton">Mina Hundar</button></a>
+               <button onClick={this.logout} className="whiteButton" id="logout">Logga ut</button>
               </div>
             </div>
           </div>
-          {/* <button onClick={this.logout} className="button" id="logout">Log out</button> */}
         </section>
         <Menu />
       </div>
