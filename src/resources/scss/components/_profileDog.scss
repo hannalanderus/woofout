@@ -17,28 +17,30 @@
       margin-bottom:80px;
       .flexWrapper{
          position: relative;
-         margin-top: -80px;
+         //margin-top: -80px;
          display: flex;
          justify-content: center;
          flex-direction: column;
          margin-bottom: 50px;
          z-index: 1000;
-
         .imageWrapper{
-         //  border: 2px solid $white;
-          width:300px;
-          height:300px;
-          overflow: hidden;
-         //  position:relative;
+       
+         align-self: center;
+         /* width: 300px; */
+         height: 300px;
+         /* overflow: hidden; */
+         position: relative;
           .addedImage{
+            border: 2px solid white;
             position: absolute;
             left: 50%;
             top: 50%;
             -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
-            height: auto;
+            height: 330px;
             width: 330px;
-            border: solid 2px white;
+            object-fit: cover;
+            overflow: hidden;
           }
         }
       }
@@ -47,6 +49,7 @@
       width:275px;
       height:160px;
       align-self:center;
+      margin-top:-30px;
       padding: 20px 20px 20px 20px;
       background-color: white;
       z-index: 3;
