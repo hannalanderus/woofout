@@ -64,6 +64,8 @@ a{
    padding-top:6px;
    font-size:27px;
    text-decoration:underline;
+   position:absolute;
+   z-index:1000;
 }
 // /*.App-header a{
 //   text-decoration: none;

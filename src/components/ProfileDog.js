@@ -80,30 +80,31 @@ class ProfileDog extends Component {
     return (
       <div className="App-profileDog">
         <section className="ProfileDog">
+
           <div className="custom-headerDog">
             <div className="ProfileDogPage-title">
               <h1>MINA HUNDAR</h1><br />
             </div>
           </div>
           <div className="ProfileDogPage-wrapper">
-          <div className="flexWrapper">
-          <div className="imageWrapper">
-          <img src={this.state.url} className="addedImage" alt="test" />
-          </div>
-          </div>
-            {this.state.data.map(each =>
-              <ul className="ProfileDogPage-list" key={each.id}>
-                <li>{each.name}</li>
-                <li>{each.breed}</li>
-                <li>{each.size}</li>
-                <li>{each.weight}</li>
-              </ul>
-            )}
 
+            {this.state.data.map(each =>
+              <div className="flexWrapper">
+                <div className="imageWrapper">
+                  <img src={this.state.url} className="addedImage" alt="test" />
+                </div>
+                <ul className="ProfileDogPage-list" key={each.id}>
+                  <h2>{each.name}</h2>
+                  <li>{each.breed}</li>
+                  <li>{each.size}</li>
+                  <li>{each.weight}</li>
+                </ul>
+              </div>
+            )}
           </div>
-        </section>
+        </section >
         <Menu />
-      </div>
+      </div >
     );
   }
 }
