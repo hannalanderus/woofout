@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import storage from './config/Fire';
+import Menu from './Menu';
 import '../resources/scss/style.scss';
 
 
@@ -52,9 +53,7 @@ class ImageUploadProfile extends Component {
       //create folder (test is the name of the folder, dont know how to change it now after testing), with image
       let storageRef = firebase.storage().ref();
       let imageRef = storageRef.child('profileimage/' + current + '.jpg').put(image, metadata);
-
       console.log(imageRef);
-
       return imageRef.on('state_changed', (snapshot) => {
       },
         (error) => {
@@ -66,6 +65,8 @@ class ImageUploadProfile extends Component {
           //complete function
           storageRef.child('profileimage/' + current + '.jpg').getDownloadURL().then(url => {
             console.log(url);
+            alert("Document successfully written!");
+            window.location.href = "/Profile";
 
           })
 
@@ -76,10 +77,24 @@ class ImageUploadProfile extends Component {
 
   render() {
     return (
-      <div className="RegistrationDogPage-form">
-        <input onChange={this.handleChangeImage} type="file"></input>
-        <img src={this.state.url} className="addedImage" alt=" preview"></img>
-        <button onClick={this.handleChangeUploadImage} className="whiteButton">Bild</button>
+     <div className="App-profile-imageUpload">
+        <section className="ProfilePage">
+          <span className="logoSpan">Woofout</span>
+          <div className="custom-header">
+            <div className="ProfilePage-title">
+              <h1>Lägg till Profil bild</h1><br />
+            </div>
+            <div className="ProfilePage-wrapper">
+               <div className="RegistrationDogPage-form">
+                 <label for="file">Välj bild</label>
+                 <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
+                 <img src={this.state.url} className="addedImage" alt=" Preview"></img>  
+            </div>
+             <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladd up</button>
+            </div>
+          </div>
+        </section>
+        <Menu />
       </div>
     );
   }

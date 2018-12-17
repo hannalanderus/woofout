@@ -7,6 +7,7 @@ import Profile from './Profile';
 import ProfileDog from './ProfileDog';
 import HamburgerMenu from './HamburgerMenu'
 import WorkoutBank from './WorkoutBank';
+import ImageUploadProfile from './ImageUploadProfile';
 import ResetPassword from './ResetPassword';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/RegistrationDog" component={RegistrationDog} />
             <Route path="/ProfileDog" component={ProfileDog} />
             <Route path="/ResetPassword" component={ResetPassword} />
+            <Route path="/ImageUploadProfile" component={ImageUploadProfile} />
 
           </Switch>
         </BrowserRouter >

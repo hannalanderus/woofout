@@ -3,6 +3,7 @@ import firebase from './config/Fire';
 import Header from './Header';
 import Menu from './Menu';
 import fire from './config/Fire';
+import ImageUploadProfile from './ImageUploadProfile';
 import '../resources/scss/style.scss';
 
 
@@ -64,23 +65,22 @@ class Profile extends Component {
 
     return (
 
-      <div className="App-profile">
+      <div className="App-profile-image">
         <section className="ProfilePage">
           <span className="logoSpan">Woofout</span>
           <div className="custom-header">
             <div className="ProfilePage-title">
               <h1>Profil</h1><br />
-
-
             </div>
             <div className="ProfilePage-userInfo">
               <h2>{this.state.data.name}</h2>
               <h2>{this.state.data.surname}</h2>
             </div>
             <div className="flexWrapper">
-              <div className="imageWrapper">
+             <a className="profileLink" href="/ImageUploadProfile"><div className="imageWrapper">
+               <div className="imageHover"><p>Uppdatera bild</p></div>
                 <img src={this.state.url} className="addedImage" alt="test" />
-              </div>
+              </div></a>
             </div>
             <div className="ProfilePage-wrapper">
               <div className="ProfilePage-listlinks">
