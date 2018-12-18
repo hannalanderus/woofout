@@ -81,9 +81,10 @@ class ImageUpload extends Component {
     return (
       <div className="App-profileDog-ImageUpload">
         <section className="ProfileDog">
+        <span className="logoSpan">Woofout</span>
           <div className="custom-headerDog">
             <div className="ProfileDogPage-title">
-              <h1>Ladda upp bild</h1><br />
+              <h1>Ladd upp bild</h1><br />
             </div>
           </div>
             <div className="ProfilePage-wrapper">
