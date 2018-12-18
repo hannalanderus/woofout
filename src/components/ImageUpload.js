@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import storage from './config/Fire';
+import Menu from './Menu';
 import '../resources/scss/style.scss';
 
 
@@ -78,11 +79,24 @@ class ImageUpload extends Component {
     console.log(this.state.image);
 
     return (
-      <div className="RegistrationDogPage-form">
-        <input onChange={this.handleChangeImage} type="file"></input>
-        <img src={this.state.url} className="addedImage" alt=" preview"></img>
-        <button onClick={this.handleChangeUploadImage} className="greyButton">Ladda upp Bild test</button>
-      </div>
+      <div className="App-profileDog-ImageUpload">
+        <section className="ProfileDog">
+          <div className="custom-headerDog">
+            <div className="ProfileDogPage-title">
+              <h1>Ladda upp bild</h1><br />
+            </div>
+          </div>
+            <div className="ProfilePage-wrapper">
+              <div className="RegistrationDogPage-form">
+                 <label for="file">Välj bild</label>
+                 <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
+                 <img src={this.state.url} className="addedImage" alt=" preview"></img>
+                <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladda upp Bild</button> 
+              </div>
+            </div>
+          </section>
+        <Menu />
+     </div >
     );
   }
 }

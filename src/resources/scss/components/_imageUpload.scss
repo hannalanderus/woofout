@@ -1,0 +1,35 @@
+.App-profileDog-ImageUpload{
+	h1{
+		margin-top:0px;
+	}
+	.ProfilePage-wrapper{
+		height:100%;
+		padding-bottom:70px;
+	}
+	.imageInput{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+
+    }
+    .imageInput,  label {
+        //margin-top: 130px;
+        margin-bottom: 30px;
+        width: 290px;
+        padding:20px;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: #a7a7a7;
+        background-color: #f7f7f7;
+        display: inline-block;
+        &:hover {
+        cursor: pointer;
+        }
+    }
+	
+
+}
+
