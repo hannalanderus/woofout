@@ -75,7 +75,6 @@ class RegistrationDog extends Component {
               <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
               <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
               <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
-              < ImageUpload />
             </div>
             <button onClick={this.newDog} className="orangeButton" id="newDog"></button>
             <div className="gdpr-wrapper">

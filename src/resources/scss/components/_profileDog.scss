@@ -1,14 +1,11 @@
-.App-header-registration{
-   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  color: $white;
-  display:flex;
-  justify-content: center;
-   padding-top: 50px; 
-}
 .ProfileDogPage{
    width:100%;
    overflow-x: hidden;
+   &-title{
+     h1{
+      margin-top: -5px;
+    }
+   }
    &-wrapper{
       position:absolute;
       margin-top: -20px;
@@ -26,6 +23,34 @@
          align-self: center;
          height: 300px;
          position: relative;
+           .imageHover{
+                display:none;
+                z-index:1;
+                border: 2px solid white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+                height: 330px;
+                width: 330px;
+                object-fit: cover;
+                overflow: hidden;      
+                p{
+                padding: 10px;
+                border-bottom:solid $white;
+                color:$white;
+                width:330px;
+                text-align:center;
+                }
+              }
+              &:hover{
+                  opacity: 0.9;
+                  cursor:pointer;
+                  .imageHover{
+                  display:block;
+                }         
+               }
           .addedImage{
             border: 2px solid white;
             position: absolute;
@@ -38,7 +63,7 @@
             object-fit: cover;
             overflow: hidden;
           }
-        }
+        }      
       }
    }
     &-list{
@@ -75,7 +100,7 @@
       z-index: 999;
       padding:0px 50px 0px 50px;
       border-bottom:3px solid white;
-       background-color:$lightpink;
+      background-color:$lightpink;
 
        @include above($s){
            margin-top: -300px;
@@ -88,4 +113,5 @@
        }
       
    }
+
 }
