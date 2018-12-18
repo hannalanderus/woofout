@@ -29,6 +29,7 @@ flex-direction:column;
          outline: 0;
          border-bottom: 1px solid $white;
          background-color:transparent;
+         color:$white;
          &::placeholder{
             color: $white;
          }

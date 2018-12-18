@@ -20,11 +20,11 @@
 }
 
 .greyButton{
-    background-color:$grayblue;
+    background-color:$white;
     border:none;
     width:189px;
     height:61px;
-    color:white;
+    color:$blue;
     text-transform: uppercase;
     align-self:center;
     margin-top:20px;
@@ -61,6 +61,21 @@
      width:135px;
      height:48px;
      background-color:$orange;
+     align-self:center;
+     letter-spacing:2.3px;
+     font-size:20px;
+     //text-underline-position: under;
+ 
+   }
+
+   .whiteButton2{
+    font-size:15px;
+     color:$orange;
+     border-radius: 24px;
+     border:none;
+     width:135px;
+     height:48px;
+     background-color:$white;
      align-self:center;
      letter-spacing:2.3px;
      font-size:20px;
