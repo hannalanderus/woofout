@@ -4,7 +4,9 @@
 	}
 	.ProfilePage-wrapper{
 		height:100%;
+        padding-top:230px;
 		padding-bottom:70px;
+        background-color:$lightblue;
 	}
 	.imageInput{
         width: 0.1px;
@@ -29,7 +31,16 @@
         cursor: pointer;
         }
     }
-	
+    .custom-headerDog{
+      width:100%;
+      self-aligne:center;
+      position:absolute;
+      padding:0px 50px 0px 50px;
+      border-bottom:3px solid white;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      background-color:$lightpink;
+   }
 
 }
 
