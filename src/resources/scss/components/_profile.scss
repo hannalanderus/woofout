@@ -48,6 +48,7 @@
     text-align:center;
     display:flex;
     flex-direction:column;
+    margin-top:-150px;
         a{
         color: $lightpink;
         }
@@ -101,6 +102,31 @@
         height:200px;
         overflow: hidden;
         position:relative;
+        z-index: 2;
+        .imageHover{
+            display:none;
+            z-index:1;
+            color:white;
+            position:absolute;
+            left: 50%;
+            top: 140%;
+            transform: translateX(-50%) translateY(-50%);
+            height: 250px;
+            width: auto;
+            p{
+            border:solid;
+            width:180px;
+            text-align:center;
+            }
+        }
+        &:hover{
+            opacity: 0.8;
+            cursor:pointer;
+            .imageHover{
+            display:block;
+            }
+           
+        }
 
         .addedImage{
                 position:absolute;
@@ -111,10 +137,57 @@
                 width: auto;
         }
 
-   }
+   } 
 
    }
 
     
     }
+
+    .App-profile-imageUpload{
+
+    .ProfilePage{
+    &-title{
+        h1{
+         margin-top: 40px;
+        }
+      }&-wrapper{
+          width:100%;
+          margin-bottom:100px;
+      }
+    }
+    
+    .imageInput{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+
+    }
+    .imageInput,  label {
+        margin-top: 130px;
+        margin-bottom: 30px;
+        width: 290px;
+        padding:20px;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: #a7a7a7;
+        background-color: #f7f7f7;
+        display: inline-block;
+        //box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+        //background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+        //background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        //background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        //background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        //background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+        &:hover {
+        cursor: pointer;
+        }
+    }
+   
+
+}
+
 
