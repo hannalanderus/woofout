@@ -1,14 +1,11 @@
-.App-header-registration{
-   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  color: $white;
-  display:flex;
-  justify-content: center;
-   padding-top: 50px; 
-}
 .ProfileDogPage{
    width:100%;
    overflow-x: hidden;
+   &-title{
+     h1{
+      margin-top: -5px;
+    }
+   }
    &-wrapper{
       position:absolute;
       margin-top:-50px;
@@ -24,12 +21,35 @@
          margin-bottom: 50px;
          z-index: 1000;
         .imageWrapper{
-       
-         align-self: center;
-         /* width: 300px; */
-         height: 300px;
-         /* overflow: hidden; */
-         position: relative;
+          align-self: center;
+          /* width: 300px; */
+          height: 300px;
+          /* overflow: hidden; */
+          position: relative;
+              .imageHover{
+                display:none;
+                z-index:1;
+                color:white;
+                position:absolute;
+                left: 50%;
+                top: 37%;
+                transform: translateX(-50%) translateY(-50%);
+                height: 250px;
+                width: auto;
+            p{
+                border:solid;
+                width:330px;
+                text-align:center;
+            }
+        }
+        &:hover{
+            opacity: 0.9;
+            cursor:pointer;
+            .imageHover{
+              display:block;
+            }
+           
+        }
           .addedImage{
             border: 2px solid white;
             position: absolute;
