@@ -79,7 +79,7 @@ class ProfileDog extends Component {
 
     return (
       <div className="App-profileDog">
-        <section className="ProfileDog">
+        <section className="ProfileDogPage">
 
           <div className="custom-headerDog">
             <div className="ProfileDogPage-title">

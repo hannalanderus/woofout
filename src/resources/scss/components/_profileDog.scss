@@ -14,18 +14,15 @@
       margin-bottom:80px;
       .flexWrapper{
          position: relative;
-         //margin-top: -80px;
          display: flex;
          justify-content: center;
          flex-direction: column;
          margin-bottom: 50px;
          z-index: 1000;
         .imageWrapper{
-          align-self: center;
-          /* width: 300px; */
-          height: 300px;
-          /* overflow: hidden; */
-          position: relative;
+         align-self: center;
+         height: 300px;
+         position: relative;
               .imageHover{
                 display:none;
                 z-index:1;
@@ -74,32 +71,33 @@
       background-color: white;
       z-index: 3;
       box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+      margin-top: -50px;
   
    }
    &-title{
+      position: relative;
+      margin-bottom:50px;
       padding-bottom:37px;
       padding-top:70px;
       text-align:center; 
       color:$white;
       font-family: 'Biko';
       font-style: normal;
+      z-index:1000;
       h1{
           text-align:center;
          font-size:36px;
          font-weight:normal;
       }
   }
-
-}
-.custom-headerDog{
-   height: 200px;
-      position:relative;
+  .custom-headerDog{
+   position: relative;
+      width:100%;
       z-index: 999;
       padding:0px 50px 0px 50px;
       border-bottom:3px solid white;
        background-color:$lightpink;
-       border-bottom-left-radius: 53px;
-       border-bottom-right-radius: 53px;
+
        @include above($s){
            margin-top: -300px;
            height:500px;
@@ -109,5 +107,6 @@
            height: 700px;
        
        }
-   
+      
+   }
 }
