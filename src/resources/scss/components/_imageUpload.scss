@@ -1,46 +1,59 @@
-.App-profileDog-ImageUpload{
-	h1{
-		margin-top:0px;
-	}
-	.ProfilePage-wrapper{
-		height:100%;
-        padding-top:230px;
-		padding-bottom:70px;
-        background-color:$lightblue;
-	}
-	.imageInput{
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
+    .ImageUpload{
 
-    }
-    .imageInput,  label {
-        //margin-top: 130px;
-        margin-bottom: 30px;
-        width: 290px;
-        padding:20px;
-        font-size: 1.25em;
-        font-weight: 700;
-        color: #a7a7a7;
-        background-color: #f7f7f7;
-        display: inline-block;
-        &:hover {
-        cursor: pointer;
+        &-wrapper{
+            height:100%;
+            padding-top: 150px;
+            padding-bottom:70px;
+            background-color:$lightblue;
+
         }
-    }
-    .custom-headerDog{
-      width:100%;
-      self-aligne:center;
-      position:absolute;
-      padding:0px 50px 0px 50px;
-      border-bottom:3px solid white;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      background-color:$lightpink;
-   }
+        &-title{
+        text-align: center;
+        font-family:"Biko";
+        color:$white;
+        }
+        &-form{
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-self:center;
+            .imageInput{
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
 
+                align-self:center;
+            }
+            .imageInput,  label {
+                align-self:center;
+                margin-bottom: 30px;
+                width: 290px;
+                padding:20px;
+                font-size: 1.25em;
+                font-weight: 700;
+                color: #a7a7a7;
+                background-color: #f7f7f7;
+                display: inline-block;
+                &:hover {
+                cursor: pointer;
+                }
+            }
+            .imgUpload{
+                align-self:center;
+                &::after{
+                    content:" ";
+                    display: inline-block;
+                    background: url('../Images/photo.svg');
+                    background-repeat: no-repeat;
+                      height: 40px;
+                    width: 40px;       
+              
+                }
+            }
+        }            
+	
 }
 

@@ -79,20 +79,18 @@ class ImageUpload extends Component {
     console.log(this.state.image);
 
     return (
-      <div className="App-profileDog-ImageUpload">
-        <section className="ProfileDog">
+      <div>
+        <section className="ImageUpload">
           <span className="logoSpan">Woofout</span>
-          <div className="custom-headerDog">
-            <div className="ProfileDogPage-title">
-              <h1>Ladd upp bild</h1><br />
+          <div className="ImageUpload-wrapper">
+            <div className="ImageUpload-title">
+              <h1>Ladda upp bild</h1><br />
             </div>
-          </div>
-          <div className="ProfilePage-wrapper">
-            <div className="RegistrationDogPage-form">
-              <label for="file">Välj bild</label>
+            <div className="ImageUpload-form">
+              <span className="imgUpload" for="file"></span>
               <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
               <img src={this.state.url} className="addedImage" alt=" preview"></img>
-              <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladda upp Bild</button>
+              <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladda upp bild</button>
             </div>
           </div>
         </section>
