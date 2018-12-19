@@ -91,7 +91,7 @@ class ImageUpload extends Component {
               <div className="RegistrationDogPage-form">
                  <label for="file">Välj bild</label>
                  <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
-                 <img src={this.state.url} className="addedImage" alt=" preview"></img>
+                 <img src={this.state.url} className="addedImage" alt=" preview" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
                 <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladda upp Bild</button> 
               </div>
             </div>
