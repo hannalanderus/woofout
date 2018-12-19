@@ -35,8 +35,10 @@ class ImageUploadProfile extends Component {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState({ 'image': image });
+     
 
     }
+
   }
 
   handleChangeUploadImage(e) {
@@ -88,7 +90,7 @@ class ImageUploadProfile extends Component {
                <div className="RegistrationDogPage-form">
                  <label for="file">Välj bild</label>
                  <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
-                 <img src={this.state.url} className="addedImage" alt=" Preview"></img>  
+                 <img src={this.state.url} className="addedImage" alt=" Preview" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>  
             </div>
              <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladd up</button>
             </div>
