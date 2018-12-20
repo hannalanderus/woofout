@@ -17,6 +17,7 @@
             flex-direction:column;
             justify-content: center;
             align-self:center;
+            margin: 0px 25px 0px 25px;
             .imageInput{
                 width: 0.1px;
                 height: 0.1px;
@@ -27,7 +28,7 @@
 
                 align-self:center;
             }
-            .imageInput,  label {
+            .imageInput{
                 align-self:center;
                 margin-bottom: 30px;
                 width: 290px;
@@ -53,7 +54,16 @@
               
                 }
             }
-        }            
+            label{
+                align-self:center;
+                margin-bottom:20px;
+                cursor:pointer;
+            }
+         @include above($s){
+            margin: 0px 425px 0px 425px;
+         }  
+        }  
+
 	
 }
 

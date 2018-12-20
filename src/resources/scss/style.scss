@@ -73,4 +73,7 @@ $xl: 1410px;
 .addedImage{
   height: 250px;
   object-fit:cover;
+  @include above ($s){
+    height: 300px;
+  }
 }

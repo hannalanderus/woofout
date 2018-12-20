@@ -87,9 +87,9 @@ class ImageUpload extends Component {
               <h1>Ladda upp bild</h1><br />
             </div>
             <div className="ImageUpload-form">
-              <span className="imgUpload" for="file"></span>
+              <label for="file"><span className="imgUpload" ></span></label>
               <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
-              <img src={this.state.url} className="addedImage" alt=" preview"></img>
+              <img src={this.state.url} className="addedImage" alt=" Preview" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
               <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladda upp bild</button>
             </div>
           </div>
