@@ -1,6 +1,16 @@
 @import 'shared/colors';
 
 .workoutPage{
+  .header{
+   width:100%;
+   self-aligne:center;
+   position:absolute;
+   padding:0px 50px 0px 50px;
+   border-bottom:3px solid white;
+   border-bottom-left-radius: 50px;
+   border-bottom-right-radius: 50px;
+   background-color:$lightpink;
+  }
   &-wrapper{
     display:flex;
     flex-direction:column;
@@ -9,13 +19,21 @@
     margin-bottom: 70px;
     h2{
     text-align:center;
-    margin-bottom:100px;
+    margin-bottom:80px;
+    margin-top: 80px;
+    color:$white;
     }
   }
   &-list{
   margin: 0px 36px 80px 36px ;
   padding:20px;
   background-color:whitesmoke;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
   li{
     padding:10px;
   }
@@ -26,5 +44,29 @@
   .listType{
   text-decoration:underline;
   }
+  }
+}
+.filterWrapper{
+  display: flex;
+  justify-content:space-around;
+  width:80%;
+  //background-color: #f7f7f7;
+  //border: 70% fafafa 2px solid;
+  align-self:center;
+  margin-top:270px;
+  margin-bottom:60px;
+  letter-spacing:2.3px;
+  font-size:15px;
+  padding: 10px;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+  
+  li:hover{
+  cursor:pointer;
+  text-decoration:underline;
   }
 }
