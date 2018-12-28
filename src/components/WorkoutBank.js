@@ -8,25 +8,28 @@ class Workoutbank extends Component {
 
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       data: [],
-      name: 'bajs'
+      type:''
     };
   }
 
-  componentDidMount () {
-    if (this.state.name === 'Rörlighet') {
-      const current = this.state.name;
-      const database = firebase.firestore().collection('trainingprogram').where("category", "==", current);
-      database.onSnapshot(this.getCollection);
-   }else{
-     const current = this.state.name;
-      const database = firebase.firestore().collection('trainingprogram');
-      database.onSnapshot(this.getCollection);
-   }
+    handleChange = (val) => {
+        this.setState({type : val});
+        console.log(this.state.type)
+        if (this.state.type ) {
+        const current = this.state.type;
+        const database = firebase.firestore().collection('trainingprogram').where("category", "==", current);
+        database.onSnapshot(this.getCollection);
+    }
   }
 
-
+  componentDidMount () {
+      const current = this.state.type;
+      const database = firebase.firestore().collection('trainingprogram');
+      database.onSnapshot(this.getCollection);
+  }
 
 
   getCollection = (querySnapshot) => {
@@ -44,33 +47,42 @@ class Workoutbank extends Component {
       });
     });
     this.setState({
-      data
+      data,
     });
   }
 
   render() {
+  
 
     return (
       <div>
     
  <section className="workoutPage">
-                <div className="workoutPage-wrapper">
+      <div className="workoutPage-wrapper">
                   <h2>ÖVNINGSBANK</h2>
-                  <Filter name ={this.state.name}/>
-                {this.state.data.map(each =>
-                  <ul className="workoutPage-list" key={each.id}>
-                    <li className="listName">{each.name}</li>
-                    <li className="listType">{each.category}</li>
-                    <li>Syfte:{each.purpose}</li>
-                    <li>Material:{each.material}</li>
-                    <li>Beskrivning: {each.description}</li>
-                  </ul>
-                )} 
-           
+            <div>
+                <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
+                <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>
+                <li onClick={this.handleChange.bind(this, "Stabilitet")}>Stabilit</li> 
+            </div>
+            {this.state.data.map(each =>
+                  {
+            return (
+              <Filter
+                key={each.id}
+                id={each.id}
+                name={each.name}
+                category={each.category}
+                purpose={each.purpose}
+                material={each.material}
+                description={each.description}
+              />
+            );
+          })}  
                 </div>
               </section >
          <Menu />
-          </div>
+      </div>
 
     );
   }
