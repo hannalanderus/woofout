@@ -81,7 +81,7 @@ class RegistrationDog extends Component {
               <input type="checkbox" className="checkbox"></input><span className="checkmark"></span><p className="gdpr-text"> Jag godkänner användarvillkoren och
                 att Woofout behandlar mina personuppgifter enligt integritetspolicyn</p>
             </div>
-            <button onClick={this.signup} className="orangeButton" id="signUp">KLART</button>
+            <button onClick={this.signup} className="whiteButton2" id="signUp">KLART</button>
           </div>
         </section>
         <Menu />

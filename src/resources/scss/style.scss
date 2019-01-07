@@ -46,18 +46,18 @@ $xl: 1410px;
 // .App {
 //   text-align: center;
 // }
-.App-header {
-  background-color: #E25E31;
-  min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  display:flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-a{
-  text-decoration: none;
-}
+// .App-header {
+//   background-color: #E25E31;
+//   min-height: 100vh;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+//   display:flex;
+//   justify-content: center;
+//   padding-top: 50px;
+// }
+// a{
+//   text-decoration: none;
+// }
 
 .logoSpan{
    color:$white;
@@ -69,16 +69,11 @@ a{
    position:absolute;
    z-index:1000;
 }
-// /*.App-header a{
-//   text-decoration: none;
-//   color:White;
-// }*/
-// .App-link {
-//   color: #61dafb;
-// }
-
 
 .addedImage{
   height: 250px;
-  object-fit: cover;
+  object-fit:cover;
+  @include above ($s){
+    height: 300px;
+  }
 }

@@ -11,24 +11,23 @@ class Workoutbank extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       data: [],
-      type:''
+      type: ''
     };
   }
 
-    handleChange = (val) => {
-        this.setState({type : val});
-        console.log(this.state.type)
-        if (this.state.type ) {
-        const current = this.state.type;
-        const database = firebase.firestore().collection('trainingprogram').where("category", "==", current);
-        database.onSnapshot(this.getCollection);
+  handleChange = (val) => {
+    this.setState({ type: val });
+    console.log(this.state.type)
+    if (this.state.type) {
+      const current = this.state.type;
+      const database = firebase.firestore().collection('trainingprogram').where("category", "==", current);
+      database.onSnapshot(this.getCollection);
     }
   }
 
-  componentDidMount () {
-      const current = this.state.type;
-      const database = firebase.firestore().collection('trainingprogram');
-      database.onSnapshot(this.getCollection);
+  componentDidMount() {
+    const database = firebase.firestore().collection('trainingprogram');
+    database.onSnapshot(this.getCollection);
   }
 
 
@@ -52,38 +51,37 @@ class Workoutbank extends Component {
   }
 
   render() {
-  
+
 
     return (
       <div>
-    
- <section className="workoutPage">
-      <div className="workoutPage-wrapper">
-      <div className="header">
-                  <h2>ÖVNINGSBANK</h2>
-      </div>
-            <div className="filterWrapper">
-                <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
-                <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>
-                <li onClick={this.handleChange.bind(this, "Stabilitet")}>Stabilit</li> 
+
+        <section className="workoutPage">
+          <div className="workoutPage-wrapper">
+            <div className="header">
+              <h2>ÖVNINGSBANK</h2>
             </div>
-            {this.state.data.map(each =>
-                  {
-            return (
-              <Filter
-                key={each.id}
-                id={each.id}
-                name={each.name}
-                category={each.category}
-                purpose={each.purpose}
-                material={each.material}
-                description={each.description}
-              />
-            );
-          })}  
-                </div>
-              </section >
-         <Menu />
+            <div className="filterWrapper">
+              <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
+              <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>
+              <li onClick={this.handleChange.bind(this, "Stabilitet")}>Stabilit</li>
+            </div>
+            {this.state.data.map(each => {
+              return (
+                <Filter
+                  key={each.id}
+                  id={each.id}
+                  name={each.name}
+                  category={each.category}
+                  purpose={each.purpose}
+                  material={each.material}
+                  description={each.description}
+                />
+              );
+            })}
+          </div>
+        </section >
+        <Menu />
       </div>
 
     );

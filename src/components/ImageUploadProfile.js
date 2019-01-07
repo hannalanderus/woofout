@@ -35,7 +35,7 @@ class ImageUploadProfile extends Component {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState({ 'image': image });
-     
+
 
     }
 
@@ -79,25 +79,23 @@ class ImageUploadProfile extends Component {
 
   render() {
     return (
-     <div className="App-profile-imageUpload">
-        <section className="ProfilePage">
+      <div>
+        <section className="ImageUpload">
           <span className="logoSpan">Woofout</span>
-          <div className="custom-header">
-            <div className="ProfilePage-title">
-              <h1>Lägg till Profil bild</h1><br />
+          <div className="ImageUpload-wrapper">
+            <div className="ImageUpload-title">
+              <h1>Ladda upp bild</h1><br />
             </div>
-            <div className="ProfilePage-wrapper">
-               <div className="RegistrationDogPage-form">
-                 <label for="file">Välj bild</label>
-                 <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
-                 <img src={this.state.url} className="addedImage" alt=" Preview" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>  
-            </div>
-             <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladd up</button>
+            <div className="ImageUpload-form">
+              <label for="file"><span className="imgUpload" ></span></label>
+              <input className="imageInput" onChange={this.handleChangeImage} type="file" name="file" id="file"></input>
+              <img src={this.state.url} className="addedImage" alt=" Preview" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+              <button onClick={this.handleChangeUploadImage} className="whiteButton">Ladda upp bild</button>
             </div>
           </div>
         </section>
         <Menu />
-      </div>
+      </div >
     );
   }
 }
