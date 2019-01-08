@@ -77,15 +77,16 @@ class Profile extends Component {
               <h2>{this.state.data.surname}</h2>
             </div>
             <div className="flexWrapper">
-             <a className="profileLink" href="/ImageUploadProfile"><div className="imageWrapper">
-               <div className="imageHover"><p>Uppdatera bild</p></div>
+              <a className="profileLink" href="/ImageUploadProfile"><div className="imageWrapper">
+                <div className="imageHover"><p>Uppdatera bild</p></div>
                 <img src={this.state.url} className="addedImage" alt="test" />
               </div></a>
             </div>
             <div className="ProfilePage-wrapper">
               <div className="ProfilePage-listlinks">
-                <a className="profileLink" href="/ProfileDog"><button className="whiteButton">Mina Hundar</button></a>
-                <button onClick={this.logout} className="whiteButton" id="logout">Logga ut</button>
+                <a className="profileLink" href="/ProfileDog"><button className="button" id="profileLinks">Mina Hundar</button></a>
+                <a className="profileLink" href="/WorkoutLogg"><button className="button" id="profileLinks">Träningslogg</button></a>
+                {/* <button onClick={this.logout} className="button" id="logout">Logga ut</button> */}
               </div>
             </div>
           </div>

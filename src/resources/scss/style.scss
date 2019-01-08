@@ -2,6 +2,7 @@
 @import 'shared/breakers';
 @import 'shared/colors';
 @import 'shared/normalize';
+@import 'shared/button';
 
 //components
 @import 'components/hamburgermenu';
@@ -12,7 +13,6 @@
 @import 'components/startpage';
 @import 'components/workoutbank';
 @import 'components/header';
-@import 'components/button';
 @import 'components/menu';
 @import 'components/imageUploadProfile';
 @import 'components/imageUpload';
@@ -67,7 +67,7 @@ $xl: 1410px;
    font-size:27px;
    text-decoration:underline;
    position:absolute;
-   z-index:1000;
+   z-index:3000;
 }
 
 .addedImage{
