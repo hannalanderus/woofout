@@ -84,8 +84,8 @@ class StartPage extends Component {
         <div className="StartPage-wrapper">
           < Header />
           <div className="StartPage-input">
-            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Mailadress"></input>
-            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
+            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="username" placeholder="Mailadress" required></input>
+            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord" required></input>
             <button className="smallLinkButton" id="losenord"><a href="/ResetPassword">Glömt lösenord</a></button>
             <button onClick={this.login} className="button" id="login">Logga in</button>
             <button className="linkButton" id="signup"><a href="/Registration">Skapa konto</a></button>

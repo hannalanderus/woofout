@@ -57,10 +57,10 @@ class Registration extends Component {
               <h2>Användare</h2>
             </div>
             <div className="RegistrationPage-form">
-              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Förnamn"></input>
-              <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn"></input>
-              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Mailadress"></input>
-              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
+              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Förnamn" required></input>
+              <input value={this.state.surname} onChange={this.handleChange} type="surname" name="surname" id="surname" placeholder="Efternamn" required></input>
+              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Mailadress" required></input>
+              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord" required></input>
             </div>
             <button onClick={this.signup} className="button" id="signUp">KLART</button>
           </div>

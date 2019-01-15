@@ -71,10 +71,10 @@ class RegistrationDog extends Component {
               <h2>Hund</h2>
             </div>
             <div className="RegistrationDogPage-form">
-              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Namn"></input>
-              <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras"></input>
-              <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek"></input>
-              <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt"></input>
+              <input value={this.state.name} onChange={this.handleChange} type="name" name="name" id="name" placeholder="Namn" required></input>
+              <input value={this.state.breed} onChange={this.handleChange} type="text" name="breed" id="breed" placeholder="Ras" required></input>
+              <input value={this.state.size} onChange={this.handleChange} type="text" name="size" id="size" placeholder="Storlek" required></input>
+              <input value={this.state.weight} onChange={this.handleChange} type="text" name="weight" id="weight" placeholder="Vikt" required></input>
             </div>
             <button onClick={this.newDog} className="button" id="newDog"></button>
             <div className="gdpr-wrapper">
