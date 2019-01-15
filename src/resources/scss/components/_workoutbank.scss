@@ -18,7 +18,7 @@
     background-color:$lightblue;
     width:100%;    
     margin-bottom: 70px;
-    h2{
+    h1{
     text-align:center;
     margin-bottom:80px;
     margin-top: 120px;
@@ -38,11 +38,11 @@
     background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
-    li{
+    li,h3{
       padding:10px;
     }
     .listName{
-      font-size:1em;
+      font-size:22px;
       font-weight: bold;
     }
     .listType{
@@ -79,7 +79,7 @@
           color:$white;
           }
         }
-        h3{
+        h2{
           padding:10px;
           font-family: "Biko";
           font-weight: bold;

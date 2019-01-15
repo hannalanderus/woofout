@@ -62,10 +62,10 @@ class Workoutbank extends Component {
           <div className="workoutPage-wrapper">
             <span className="logoSpan">Woofout</span>
             <div className="header">
-              <h2>Övningsbank</h2>
+              <h1>Övningsbank</h1>
             </div>
             <div className="filterWrapper">
-              <h3>FILTRERA</h3>
+              <h2>FILTRERA</h2>
               <ul>
                 <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
                 <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>

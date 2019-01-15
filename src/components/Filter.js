@@ -11,13 +11,13 @@ class Filter extends Component {
 
         return (
             <div>
-                 <ul className="workoutPage-list" key={this.props.id}>
-                    <li className="listName">{this.props.name}</li>
+                <ul className="workoutPage-list" key={this.props.id}>
+                    <h3 className="listName">{this.props.name}</h3>
                     <li className="listType">{this.props.category}</li>
-                    <li>Syfte:{this.props.purpose}</li>
-                    <li>Material:{this.props.material}</li>
-                    <li>Beskrivning: {this.props.description}</li>
-                   </ul>          
+                    <li><h4>Syfte:</h4>{this.props.purpose}</li>
+                    <li><h4>Material:</h4>{this.props.material}</li>
+                    <li><h4>Beskrivning:</h4>{this.props.description}</li>
+                </ul>
             </div>
         )
     }
