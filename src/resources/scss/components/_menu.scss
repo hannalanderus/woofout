@@ -12,7 +12,7 @@
     padding: 0px 10px 0px 10px;
     z-index:10000;
     a{
-        padding:10px;
+        padding:15px;
         font-size: 12px;
         color:$black;
         max-width:100px;
@@ -25,8 +25,8 @@
         display: inline-block;
         content: " ";
         background:url('../Images/avatar-inside-a-circle.svg');
-        height:30px;
-        width:30px
+        height: 25px;
+        width: 25px;
     }
  
 }
@@ -36,8 +36,8 @@
         content:" ";
         display: inline-block;
         background: url('../Images/pawprint-outline-in-a-circle.svg');
-        height:30px;
-        width:30px
+        height: 25px;
+    width: 25px;
     }
  
 }
@@ -48,8 +48,8 @@
         display: inline-block;
         background: url('../Images/plus.svg');
         background-repeat: no-repeat;
-          height: 32px;
-        width: 32px;
+        height: 27px;
+    width: 27px;
     }
  
 }
@@ -60,8 +60,8 @@
         display: inline-block;
         background: url('../Images/whistle.svg');
         background-repeat: no-repeat;
-          height: 40px;
-        width: 40px;
+          height: 32px;
+        width: 32px;
     }
  
 }
@@ -72,8 +72,8 @@
         display: inline-block;
         background: url('../Images/badge.svg');
         background-repeat: no-repeat;
-          height: 40px;
-        width: 40px;
+          height: 35px;
+        width: 35px;
 
     }
  
