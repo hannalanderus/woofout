@@ -1,15 +1,16 @@
 @import 'shared/colors';
+@import 'shared/button';
 
 .App-registration{
   min-height: 100vh;
   
 }
 .RegistrationPage{
-&-wrapper{
+   &-wrapper{
 
-display:flex;
-flex-direction:column;
-}
+   display:flex;
+   flex-direction:column;
+   }
    &-form{
       // -webkit-box-shadow: 0px 9px 20px 0px rgba(164,162,162,0.5);
       // -moz-box-shadow: 0px 9px 20px 0px rgba(164,162,162,0.5);
@@ -29,6 +30,7 @@ flex-direction:column;
          outline: 0;
          border-bottom: 1px solid $white;
          background-color:transparent;
+         color:$white;
          &::placeholder{
             color: $white;
          }
@@ -45,8 +47,11 @@ flex-direction:column;
          align-self:center;
          margin-top:20px;
 
-      }
+      } 
 
+   }
+   #signUp{
+      color:$blue;
    }
    &-title{
       padding-bottom:37px;

@@ -20,7 +20,7 @@
         z-index: -1;
 
     }
-    .imageInput,  label {
+    .imageInput {
         margin-top: 130px;
         margin-bottom: 30px;
         width: 290px;
@@ -39,6 +39,23 @@
         &:hover {
         cursor: pointer;
         }
+    }
+    .imgUpload{
+        align-self:center;
+        &::after{
+            content:" ";
+            display: inline-block;
+            background: url('../Images/photo.svg');
+            background-repeat: no-repeat;
+              height: 40px;
+            width: 40px;       
+      
+        }
+    }
+    label{
+        align-self:center;
+        margin-bottom:20px;
+        cursor:pointer;
     }
    
 

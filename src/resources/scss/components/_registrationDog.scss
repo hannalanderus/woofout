@@ -34,7 +34,8 @@
 			 border: 0;
 			 outline: 0;
 			 border-bottom: 1px solid $white;
-			 background-color:transparent;
+			 background-color:transparent;  
+			  color:$white;
 			 &::placeholder{
 				color: $white;
 			 }
@@ -43,6 +44,9 @@
 			 }
 			
 			}	
+		}
+		#signUpDog{
+			color:$orange;
 		}
 	&-title{
 		padding-bottom:37px;
@@ -70,12 +74,15 @@
 		 height:60px;
 		 border-radius: 100%;
 		 position:relative;
+		 background-color:$orange;
 		 &::after{
 			content: "+";
 			font-size: 50px;
 			position: absolute;
 			-webkit-transform: translate(-41%, -57%);
 			transform: translate(-41%, -50%);
+		
+			color:white;
 		
 		 }
 	 }

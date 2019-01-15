@@ -1,15 +1,17 @@
 @import 'shared/colors';
 @import 'shared/fonts';
 @import 'shared/breakers';
+@import 'shared/button';
 
 
 .ProfilePage{
-
+    background:  linear-gradient(to bottom, rgba(157,180,164,1), rgba(229,233,231,1));
+    height:100vh;
     &-wrapper{
         display:flex;
         justify-content: center;
         flex-direction: column; 
-        height: calc(100vh - 169px);
+       
     }
     &-userInfo{
         display:flex;
@@ -48,24 +50,24 @@
     text-align:center;
     display:flex;
     flex-direction:column;
-    margin-top:-150px;
-        a{
-        color: $lightpink;
+    margin-top:20px;
+        #profileLinks{
+            margin: 20px 20px;
+            color:$green;
+            text-transform: none;
+            &:hover{
+                background-color:$lightpink;
+                color:white; 
+            }
+            &:active{
+                background-color:$lightpink;
+                color:white;
+            }
         }
-    }
-    .whiteButton{
-        &-visited{
-            color:black;
-        }
-        &:hover{
-            color: #555;
-            background: #f5f5f5;
-            transition: ease all 0.3s;
-        }
-
     }
     .custom-header{
         position:relative;
+        z-index: 1000;
         &::before{
             background-color:$lightpink;
             position: absolute;
@@ -73,6 +75,7 @@
             width: 100%;
             height: 400px;
             top: -50;
+            border-bottom: white 3px solid;
             -webkit-transform-origin: top right;
             transform-origin: top right;
             -webkit-transform: skewY(-20deg);
@@ -98,8 +101,8 @@
       .imageWrapper{
         border:solid $white;
         border-radius: 50%;
-        width:200px;
-        height:200px;
+        width:150px;
+        height:150px;
         overflow: hidden;
         position:relative;
         z-index: 2;

@@ -2,6 +2,7 @@
 @import 'shared/breakers';
 @import 'shared/colors';
 @import 'shared/normalize';
+@import 'shared/button';
 
 //components
 @import 'components/hamburgermenu';
@@ -12,7 +13,6 @@
 @import 'components/startpage';
 @import 'components/workoutbank';
 @import 'components/header';
-@import 'components/button';
 @import 'components/menu';
 @import 'components/imageUploadProfile';
 @import 'components/imageUpload';
@@ -46,18 +46,18 @@ $xl: 1410px;
 // .App {
 //   text-align: center;
 // }
-.App-header {
-  background-color: #E25E31;
-  min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  display:flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-a{
-  text-decoration: none;
-}
+// .App-header {
+//   background-color: #E25E31;
+//   min-height: 100vh;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+//   display:flex;
+//   justify-content: center;
+//   padding-top: 50px;
+// }
+// a{
+//   text-decoration: none;
+// }
 
 .logoSpan{
    color:$white;
@@ -67,18 +67,13 @@ a{
    font-size:27px;
    text-decoration:underline;
    position:absolute;
-   z-index:1000;
+   z-index:3000;
 }
-// /*.App-header a{
-//   text-decoration: none;
-//   color:White;
-// }*/
-// .App-link {
-//   color: #61dafb;
-// }
-
 
 .addedImage{
   height: 250px;
-  object-fit: cover;
+  object-fit:cover;
+  @include above ($s){
+    height: 300px;
+  }
 }

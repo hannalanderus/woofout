@@ -90,10 +90,10 @@ class ProfileDog extends Component {
 
             {this.state.data.map(each =>
               <div className="flexWrapper">
-              <div className="imageWrapper">
+                <div className="imageWrapper">
                   <a className="profileLink" href="/ImageUpload"><div className="imageHover"><p>Uppdatera bild</p></div></a>
                   <img src={this.state.url} className="addedImage" alt="test" />
-              </div>
+                </div>
                 <ul className="ProfileDogPage-list" key={each.id}>
                   <h2>{each.name}</h2>
                   <li>{each.breed}</li>

@@ -62,7 +62,7 @@ class Registration extends Component {
               <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email" placeholder="Mailadress"></input>
               <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password" placeholder="Lösenord"></input>
             </div>
-            <button onClick={this.signup} className="greyButton" id="signUp">KLART</button>
+            <button onClick={this.signup} className="button" id="signUp">KLART</button>
           </div>
         </section>
       </div >
