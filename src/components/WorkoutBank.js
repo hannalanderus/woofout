@@ -24,7 +24,9 @@ class Workoutbank extends Component {
       database.onSnapshot(this.getCollection);
     }
   }
-
+  handleReload = () => {
+    window.location.href = "/WorkoutBank";
+  }
   componentDidMount() {
     const database = firebase.firestore().collection('trainingprogram');
     database.onSnapshot(this.getCollection);
@@ -58,13 +60,18 @@ class Workoutbank extends Component {
 
         <section className="workoutPage">
           <div className="workoutPage-wrapper">
+            <span className="logoSpan">Woofout</span>
             <div className="header">
-              <h2>ÖVNINGSBANK</h2>
+              <h2>Övningsbank</h2>
             </div>
             <div className="filterWrapper">
-              <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
-              <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>
-              <li onClick={this.handleChange.bind(this, "Stabilitet")}>Stabilit</li>
+              <h3>FILTRERA</h3>
+              <ul>
+                <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
+                <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>
+                <li onClick={this.handleChange.bind(this, "Stabilitet")}>Stabilitet</li>
+                <li onClick={this.handleReload}>Alla</li>
+              </ul>
             </div>
             {this.state.data.map(each => {
               return (
