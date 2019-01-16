@@ -30,6 +30,7 @@ class Workoutbank extends Component {
   componentDidMount() {
     const database = firebase.firestore().collection('trainingprogram');
     database.onSnapshot(this.getCollection);
+
   }
 
 
@@ -70,6 +71,7 @@ class Workoutbank extends Component {
                 <li onClick={this.handleChange.bind(this, "Rörlighet")}>Rörlighet</li>
                 <li onClick={this.handleChange.bind(this, "Balans")}>Balans</li>
                 <li onClick={this.handleChange.bind(this, "Stabilitet")}>Stabilitet</li>
+
                 <li onClick={this.handleReload}>Alla</li>
               </ul>
             </div>

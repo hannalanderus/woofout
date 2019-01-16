@@ -15,7 +15,7 @@ class Menu extends Component {
                     <a className="profileDogIcon" href="/ProfileDog">Profil Hund</a>
                     <a className="regDogIcon" href="/RegistrationDog">Lägg till hund</a>
                     <a className="workoutBankIcon" href="/WorkoutBank">Övningsbank</a>
-                    <a className="workoutLoggIcon" href="/WorkoutLogg">Träningslogg</a>
+                    {/* <a className="workoutLoggIcon" href="/WorkoutLogg">Träningslogg</a> */}
                 </ul>
             </div>
         )

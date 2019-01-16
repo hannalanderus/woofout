@@ -47,6 +47,7 @@
 		}
 		#signUpDog{
 			color:$orange;
+			margin-bottom:50px;
 		}
 	&-title{
 		padding-bottom:37px;
@@ -68,20 +69,24 @@
 			}
 		 }
 	 
-	
+		.addDog{
+			text-align:center;
+			 margin-top:10px;
+			 color:$white;
+		}
 	 #newDog{
 		 width:60px;
 		 height:60px;
 		 border-radius: 100%;
 		 position:relative;
 		 background-color:$orange;
+		 margin-top: 20px;
 		 &::after{
 			content: "+";
 			font-size: 50px;
 			position: absolute;
 			-webkit-transform: translate(-41%, -57%);
 			transform: translate(-41%, -50%);
-		
 			color:white;
 		
 		 }
@@ -90,7 +95,8 @@
 	 .gdpr{
 
 	 &-wrapper{
-		padding: 33px 53px 43px 85px;
+		padding: 33px 5px 43px 5px;
+		text-align:center;
 		display:flex;
 		flex-direction:row;
 		position:relative;
