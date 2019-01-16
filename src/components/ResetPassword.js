@@ -54,10 +54,10 @@ class ResetPassword extends Component {
       <div>
         <div className="StartPage-wrapper">
           < Header />
-          <form>
-            <h1>Återställ ditt lösenord</h1>
-            <input value={this.state.emailReset} onChange={this.handleReset} id="reset" placeholder="mailadress" type="emailReset" name="emailReset"></input>
-            <button onClick={this.losenord} className="smallLinkButton">Återställ</button>
+          <form class="resetForm">
+            <h1 class="reset">Återställ ditt lösenord</h1>
+            <input value={this.state.emailReset} onChange={this.handleReset} id="resetfield" placeholder="mailadress" type="emailReset" name="emailReset"></input>
+            <button onClick={this.losenord} id="resetbutton" className="smallLinkButton">Återställ</button>
           </form>
         </div>
       </div>

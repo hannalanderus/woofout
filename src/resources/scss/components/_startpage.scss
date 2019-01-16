@@ -8,7 +8,27 @@
   -webkit-animation: AnimationName 20s ease infinite;
 -moz-animation: AnimationName 20s ease infinite;
 animation: AnimationName 20s ease infinite;
+.resetForm{
+text-align:center;
+
+  .reset{
+    font-family:'biko';
+    color:$white;
+    font-size:24px;
+    margin:10px;
   }
+    #resetfield{
+      margin:10px;
+      padding:6px 15px 6px 15px ;
+    }
+    #resetbutton{
+      border:1px solid $white;
+      padding:10px 15px 10px 15px ;
+      text-decoration:none;
+    }
+  }
+}
+  
   h1{
     color:$white;
   }
@@ -49,6 +69,9 @@ input{
  margin-top:35px;
  text-transform: uppercase;
  letter-spacing: 2.3px;
+ color: $lightpink;
+ padding-top:6px;
+ 
   
   }
 

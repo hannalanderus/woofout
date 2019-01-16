@@ -65,7 +65,8 @@ class Profile extends Component {
 
       <div className="App-profile-image">
         <section className="ProfilePage">
-          <span className="logoSpan">Woofout</span>
+          <span className="logoSpan" >Woofout</span>
+          <button onClick={this.logout} className="button" id="logout"></button>
           <div className="custom-header">
             <div className="ProfilePage-title">
               <h1>Profil</h1><br />
@@ -84,13 +85,13 @@ class Profile extends Component {
               <div className="ProfilePage-listlinks">
                 <a className="profileLink" href="/ProfileDog"><button className="button" id="profileLinks">Mina Hundar</button></a>
                 <a className="profileLink" href="/WorkoutLogg"><button className="button" id="profileLinks">Träningslogg</button></a>
-                {/* <button onClick={this.logout} className="button" id="logout">Logga ut</button> */}
+
               </div>
             </div>
           </div>
         </section>
         <Menu />
-      </div>
+      </div >
     );
   }
 }
