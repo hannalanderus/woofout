@@ -4,7 +4,6 @@ import Menu from './Menu';
 import fire from './config/Fire';
 import '../resources/scss/style.scss';
 
-
 class Profile extends Component {
 
   constructor(props) {
@@ -65,7 +64,7 @@ class Profile extends Component {
 
       <div className="App-profile-image">
         <section className="ProfilePage">
-          <span className="logoSpan" >Woofout</span>
+          <span className="logoSpan">Woofout</span>
           <button onClick={this.logout} className="button" id="logout"></button>
           <div className="custom-header">
             <div className="ProfilePage-title">
@@ -85,7 +84,6 @@ class Profile extends Component {
               <div className="ProfilePage-listlinks">
                 <a className="profileLink" href="/ProfileDog"><button className="button" id="profileLinks">Mina Hundar</button></a>
                 <a className="profileLink" href="/WorkoutLogg"><button className="button" id="profileLinks">Träningslogg</button></a>
-
               </div>
             </div>
           </div>

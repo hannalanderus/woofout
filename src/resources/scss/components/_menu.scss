@@ -18,9 +18,11 @@
         font-size: 12px;
         color:$black;
         max-width:100px;
-        // @include below ($s){
-        //     padding:5px;
-        // }
+            @include above($l){
+                margin: 0px 20px 0px 20px;
+                max-width: 90px;
+          
+            }
     }
     
 }
@@ -32,6 +34,10 @@
         background:url('../Images/avatar-inside-a-circle.svg');
         height: 25px;
         width: 25px;
+        @include above($l){
+            height: 35px;
+            width: 35px;
+        }
     }
  
 }
@@ -43,6 +49,10 @@
         background: url('../Images/pawprint-outline-in-a-circle.svg');
         height: 25px;
     width: 25px;
+    @include above($l){
+        height: 35px;
+        width: 35px;
+    }
     }
  
 }
@@ -55,6 +65,10 @@
         background-repeat: no-repeat;
         height: 27px;
     width: 27px;
+    @include above($l){
+        height: 35px;
+        width: 35px;
+    }
     }
  
 }
@@ -67,6 +81,11 @@
         background-repeat: no-repeat;
           height: 32px;
         width: 32px;
+        @include above($l){
+            height: 42px;
+            width: 42px;
+            padding-bottom: 5px;
+        }
     }
  
 }
@@ -79,6 +98,10 @@
         background-repeat: no-repeat;
           height: 35px;
         width: 35px;
+        @include above($l){
+            height: 45px;
+            width: 45px;
+        }
 
     }
  

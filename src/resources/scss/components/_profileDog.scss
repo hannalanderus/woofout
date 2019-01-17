@@ -1,3 +1,9 @@
+@import 'shared/colors';
+@import 'shared/fonts';
+@import 'shared/breakers';
+@import 'shared/button';
+
+
 .ProfileDogPage{
    width:100%;
    overflow-x: hidden;
@@ -11,6 +17,9 @@
       margin-top: -150px;
       width:100%;
       margin-bottom:80px;
+      @include above ($m){
+        margin-top: -100px;
+      }
       .flexWrapper{
          position: relative;
          display: flex;
@@ -31,8 +40,8 @@
                 top: 50%;
                 -webkit-transform: translateX(-50%) translateY(-50%);
                 transform: translateX(-50%) translateY(-50%);
-                height: 330px;
-                width: 330px;
+                height: 338px;
+                width: 320px;
                 object-fit: cover;
                 overflow: hidden;      
                 p{
@@ -118,8 +127,8 @@
            height:500px;
        }
        @include above($m){
-           margin-top: -400px;
-           height: 700px;
+           margin-top: 0px;
+           height: 300px;
        
        }
       

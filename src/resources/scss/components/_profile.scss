@@ -105,8 +105,12 @@
                 height: 700px;
             
             }
+            @include above($l){
+            margin-top: -600px;
+            transform: skewY(-13deg);
         }
     }
+}
    
    .flexWrapper{
         display: flex;
