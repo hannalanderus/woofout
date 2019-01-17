@@ -3,13 +3,13 @@
 
 .workoutPage{
   .header{
-    width: 130%;
+    width: 100%;
     overflow: hidden;
     align-self:center;
     position:absolute;
     padding:0px 50px 0px 50px;
     border-bottom:3px solid white;
-    border-radius: 49px 48px 261px 253px / 0px 0px 150px 150px;
+    border-radius: 0px 82px 346px 341px / 0px 0px 181px 181px;
     background:  linear-gradient(to bottom, #7B8DC4, $darkblue);
   }
   &-wrapper{
@@ -32,12 +32,15 @@
     margin: 0px 20px 80px 20px;
     padding:20px;
     background-color:whitesmoke;
-    box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    box-shadow: 0px 1px 18px #aaa, inset 0px 2px 3px #fff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
     background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+    @include above ($m){
+      margin: 0px 80px 80px 80px;
+    }
     li,h3{
       padding:10px;
     }

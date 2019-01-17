@@ -18,11 +18,10 @@
         font-size: 12px;
         color:$black;
         max-width:100px;
-            @include above($l){
-                margin: 0px 20px 0px 20px;
-                max-width: 90px;
-          
-            }
+        @include above($m){
+            max-width: 90px;
+            margin: 0px 20px 0px 20px;
+        }
     }
     
 }
@@ -65,6 +64,7 @@
         background-repeat: no-repeat;
         height: 27px;
     width: 27px;
+  
     @include above($l){
         height: 35px;
         width: 35px;
