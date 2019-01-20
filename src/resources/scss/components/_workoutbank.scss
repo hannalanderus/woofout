@@ -3,7 +3,7 @@
 
 .workoutPage{
   .header{
-    width: 130%;
+    width: 100%;
     overflow: hidden;
     align-self:center;
     position:absolute;
@@ -38,6 +38,12 @@
     background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
     background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+    @include above ($s){
+      margin: 0px 50px 80px 50px;
+    }
+    @include above ($m){
+      margin: 0px 80px 80px 80px;
+    }
     li,h3{
       padding:10px;
     }

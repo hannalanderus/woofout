@@ -61,7 +61,6 @@ class Workoutbank extends Component {
 
         <section className="workoutPage">
           <div className="workoutPage-wrapper">
-            <span className="logoSpan">Woofout</span>
             <div className="header">
               <h1>Övningsbank</h1>
             </div>

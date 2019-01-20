@@ -64,7 +64,6 @@ class Profile extends Component {
 
       <div className="App-profile-image">
         <section className="ProfilePage">
-          <span className="logoSpan">Woofout</span>
           <button onClick={this.logout} className="button" id="logout"></button>
           <div className="custom-header">
             <div className="ProfilePage-title">
@@ -78,7 +77,8 @@ class Profile extends Component {
               <a className="profileLink" href="/ImageUploadProfile"><div className="imageWrapper">
                 <div className="imageHover"><p>Uppdatera bild</p></div>
                 <img src={this.state.url} className="addedImage" alt="test" />
-              </div></a>
+              </div>
+              </a>
             </div>
             <div className="ProfilePage-wrapper">
               <div className="ProfilePage-listlinks">

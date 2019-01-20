@@ -81,7 +81,6 @@ class ImageUpload extends Component {
     return (
       <div>
         <section className="ImageUpload">
-          <span className="logoSpan">Woofout</span>
           <div className="ImageUpload-wrapper">
             <div className="ImageUpload-title">
               <h1>Ladda upp bild</h1><br />

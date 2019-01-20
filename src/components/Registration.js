@@ -50,7 +50,6 @@ class Registration extends Component {
       <div className="App-registration blue-gradient">
         <section className="RegistrationPage">
           <div className="RegistrationPage-wrapper">
-            <span className="logoSpan">Woofout</span>
             <div className="RegistrationPage-title">
               <h1>Registrering</h1><br />
               <h2>Användare</h2>

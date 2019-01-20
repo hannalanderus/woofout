@@ -117,12 +117,10 @@
       z-index: 999;
       border-bottom:3px solid white;
       background-color:$lightpink;
-      border-radius: 49px 48px 261px 253px / 0px 0px 150px 150px;
+      border-radius: 0px 2px 349px 0px / 180px 204px 350px 0px;
       height:350px;
       width:100%;
        @include above($s){
-           margin-top: -300px;
-           height:500px;
            border-radius: 49px 48px 261px 253px / 0px 0px 150px 150px;
        }
        @include above($m){

@@ -67,7 +67,6 @@ class RegistrationDog extends Component {
       <div className="App-registration-dog orange-gradient">
         <section className="RegistrationDogPage">
           <div className="RegistrationDogPage-wrapper">
-            <span className="logoSpan">Woofout</span>
             <div className="RegistrationDogPage-title">
               <h1>Registrering</h1><br />
               <h2>Hund</h2>

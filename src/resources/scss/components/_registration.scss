@@ -7,9 +7,12 @@
 }
 .RegistrationPage{
    &-wrapper{
-
+      padding-top:90px;
    display:flex;
    flex-direction:column;
+   @include above ($s){
+      padding-top:110px;
+      }
    }
    &-form{
       display:flex;
@@ -48,6 +51,14 @@
    }
    #signUp{
       color:$blue;
+      @include above ($s){
+         margin-top:30px;
+      }
+      &:hover{
+         background-color:$blue;
+         color:white;
+
+      } 
    }
    &-title{
       padding-bottom:37px;

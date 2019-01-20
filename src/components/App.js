@@ -18,6 +18,7 @@ class App extends Component {
 
     return (
       <div>
+        <span className="logoSpan">Woofout</span>
         <BrowserRouter>
           <Switch>
             <Route path="/" component={StartPage} exact />
