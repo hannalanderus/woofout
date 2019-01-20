@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
-//import Header from './Header';
 import '../resources/scss/style.scss';
 
 

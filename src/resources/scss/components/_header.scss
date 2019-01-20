@@ -13,33 +13,3 @@
       }
     }
 }
-/**** Profile *****/
-.App{
-	&-profile{
-		.StartPage-header{
-			.profileHeadline{
-			display:none;
-			}
-		}
-	}
-}
-/**** ProfileDog *****/
-.App{
-	&-profileDog{
-		.StartPage-header{
-			.dogs{
-			display:none;
-			}
-		}
-	}
-}
-/**** Registration 
-.App{
-	&-registration{
-		.StartPage-header{
-			.registartionHeadline{
-			display:block;
-			}
-		}
-	}
-}*****/

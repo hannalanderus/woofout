@@ -5,7 +5,6 @@ import Registration from './Registration';
 import RegistrationDog from './RegistrationDog';
 import Profile from './Profile';
 import ProfileDog from './ProfileDog';
-import HamburgerMenu from './HamburgerMenu'
 import WorkoutBank from './WorkoutBank';
 import ImageUploadProfile from './ImageUploadProfile';
 import ImageUpload from './ImageUpload';
@@ -19,7 +18,6 @@ class App extends Component {
 
     return (
       <div>
-        {/* <HamburgerMenu /> */}
         <BrowserRouter>
           <Switch>
             <Route path="/" component={StartPage} exact />
