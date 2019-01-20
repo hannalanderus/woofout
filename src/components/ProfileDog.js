@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import fire from './config/Fire';
-import Header from './Header';
 import Menu from './Menu';
 import '../resources/scss/style.scss';
 
@@ -28,16 +27,8 @@ class ProfileDog extends Component {
 
   componentDidMount() {
     fire.auth().onAuthStateChanged((user) => {
-      /**display image***/
-      // let image = this.state.image;
-
-      // let imageRef = storageRef.child('test/bosseBulldog.jpg');
-      // console.log(imageRef);
-      // storageRef.child('test/' + image.name).getDownloadURL().then(url => {
-      //   this.setState({ image: image })
       firebase.auth().onAuthStateChanged((user) => {
         var current = firebase.auth().currentUser.uid;
-        // })
         var storageRef = firebase.storage().ref("test/" + current + '.jpg');
         storageRef.getDownloadURL().then(url => {
           console.log(url);
@@ -64,7 +55,6 @@ class ProfileDog extends Component {
                 userID,
                 image,
               });
-              //console.log(this.state.image);
             });
             this.setState({ data });
           })
@@ -80,7 +70,6 @@ class ProfileDog extends Component {
     return (
       <div className="App-profileDog">
         <section className="ProfileDogPage">
-
           <div className="custom-headerDog">
             <div className="ProfileDogPage-title">
               <h1>MINA HUNDAR</h1><br />

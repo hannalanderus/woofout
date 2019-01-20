@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
 import Menu from './Menu';
-//import Header from './Header';
-
 import ImageUpload from './ImageUpload';
 import '../resources/scss/style.scss';
 
