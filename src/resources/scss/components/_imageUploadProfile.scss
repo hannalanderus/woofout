@@ -1,3 +1,5 @@
+@import 'shared/colors';
+    
     .App-profile-imageUpload{
 
     .ProfilePage{
@@ -7,7 +9,7 @@
         }
       }&-wrapper{
           width:100%;
-          margin-bottom:100px;
+
       }
     }
     
@@ -30,18 +32,13 @@
         color: #a7a7a7;
         background-color: #f7f7f7;
         display: inline-block;
-        //box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
-        //background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
-        //background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
-        //background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
-        //background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
-        //background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
         &:hover {
-        cursor: pointer;
+            cursor: pointer;
         }
     }
     .imgUpload{
         align-self:center;
+        cursor:pointer;
         &::after{
             content:" ";
             display: inline-block;
@@ -57,6 +54,7 @@
         margin-bottom:20px;
         cursor:pointer;
     }
-   
+
 
 }
+    

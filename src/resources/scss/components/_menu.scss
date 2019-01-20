@@ -18,7 +18,7 @@
         font-size: 12px;
         color:$black;
         max-width:100px;
-            @include above($l){
+            @include above($s){
                 margin: 0px 20px 0px 20px;
                 max-width: 90px;
           

@@ -1,16 +1,22 @@
     .ImageUpload{
-
+   
+ 
         &-wrapper{
-            height:100%;
-            padding-top: 150px;
+            height: 100vh;
+            padding-top: 100px;
             padding-bottom:70px;
             background-color:$lightblue;
+            @include above ($s){
+                padding-top: 150px; 
+            }
+
 
         }
         &-title{
         text-align: center;
         font-family:"Biko";
         color:$white;
+        margin-top: 40px;
         }
         &-form{
             display:flex;
@@ -18,6 +24,9 @@
             justify-content: center;
             align-self:center;
             margin: 0px 25px 0px 25px;
+            @include above ($m){
+                margin: 0px 225px 0px 225px; 
+            }
             .imageInput{
                 width: 0.1px;
                 height: 0.1px;
@@ -25,7 +34,6 @@
                 overflow: hidden;
                 position: absolute;
                 z-index: -1;
-
                 align-self:center;
             }
             .imageInput{
@@ -44,6 +52,7 @@
             }
             .imgUpload{
                 align-self:center;
+                cursor:pointer;
                 &::after{
                     content:" ";
                     display: inline-block;
@@ -56,14 +65,20 @@
             }
             label{
                 align-self:center;
-                margin-bottom:20px;
+                margin-bottom:10px;
                 cursor:pointer;
             }
-         @include above($s){
-            margin: 0px 425px 0px 425px;
-         }  
+        //  @include above($s){
+        //     margin: 0px 425px 0px 425px;
+        //  }  
         }  
-
-	
+        .addedImage{
+            height: 250px;
+            margin-bottom: 10px;
+            @include above ($m){
+             margin-bottom: 45px;
+           } 
+   
 }
+    }
 
