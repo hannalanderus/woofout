@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from './config/Fire';
-import storage from './config/Fire';
 import Menu from './Menu';
 import '../resources/scss/style.scss';
 

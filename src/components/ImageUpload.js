@@ -69,10 +69,11 @@ class ImageUpload extends Component {
             console.log(url);
 
           })
-
+          window.location.href = "/ProfileDog";
         });
 
     });
+
   }
 
   render() {

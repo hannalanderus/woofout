@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import firebase from './config/Fire.js';
-import fire from './config/Fire';
 import '../resources/scss/style.scss';
 
 
