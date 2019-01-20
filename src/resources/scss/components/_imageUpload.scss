@@ -1,11 +1,13 @@
     .ImageUpload{
-   
+
+
  
         &-wrapper{
-            height: 100vh;
             padding-top: 100px;
             padding-bottom:70px;
             background-color:$lightblue;
+            width: 100%; 
+            min-height: 100vh;
             @include above ($s){
                 padding-top: 150px; 
             }
@@ -25,7 +27,10 @@
             align-self:center;
             margin: 0px 25px 0px 25px;
             @include above ($m){
-                margin: 0px 225px 0px 225px; 
+                margin: 0px 325px 0px 325px; 
+            }
+            @include above ($l){
+                margin: 0px 525px 0px 525px; 
             }
             .imageInput{
                 width: 0.1px;
