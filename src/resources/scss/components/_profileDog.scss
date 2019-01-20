@@ -123,6 +123,7 @@
        @include above($s){
            margin-top: -300px;
            height:500px;
+           border-radius: 49px 48px 261px 253px / 0px 0px 150px 150px;
        }
        @include above($m){
            margin-top: 0px;
