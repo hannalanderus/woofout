@@ -30,7 +30,6 @@ class App extends Component {
             <Route path="/ResetPassword" component={ResetPassword} />
             <Route path="/ImageUploadProfile" component={ImageUploadProfile} />
             <Route path="/ImageUpload" component={ImageUpload} />
-
           </Switch>
         </BrowserRouter >
       </div >
